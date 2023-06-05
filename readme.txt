@@ -18,6 +18,10 @@ Manage any number of Merchant Return Policies for Google Merchant listings.
 
 == Description ==
 
+<blockquote>
+2023/06/05 - The WPSSO MRP add-on has been submitted to the WordPress.org plugin directory, but this may take a while as their current backlog is about 41 days. You can always <a href="https://wpsso.com/extend/plugins/wpsso-merchant-return-policy/">download the latest version of the WPSSO MRP add-on directly from WPSSO.com</a>.
+</blockquote>
+
 <!-- about -->
 
 **Manage any number of Merchant Return Policies** for Google Merchant listings.
