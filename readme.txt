@@ -21,7 +21,7 @@ Manage any number of Merchant Return Policies for Google Merchant listings.
 <blockquote>
 <p>2023/06/05 - The WPSSO MRP add-on has been submitted to the WordPress.org plugin directory, but this may take a while as their current backlog is about 41 days. You can always <a href="https://wpsso.com/extend/plugins/wpsso-merchant-return-policy/">download the latest version of the WPSSO MRP add-on directly from WPSSO.com</a>.</p>
 
-<p><strong>Premium customers</strong> can also find the WPSSO MRP add-on under the SSO &gt; Plugin Add-ons page (Premium edition required).<p>
+<p><strong>Premium customers</strong> can also find the WPSSO MRP add-on in the SSO &gt; Plugin Add-ons settings page (Premium edition required).<p>
 </blockquote>
 
 <!-- about -->
@@ -82,7 +82,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.0.0-rc.2 (2023/06/05)**
+**Version 1.0.0 (2023/06/05)**
 
 * **New Features**
 	* First release.
@@ -95,11 +95,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.5.
 	* WordPress v5.5.
-	* WPSSO Core v15.13.0-rc.2.
+	* WPSSO Core v15.13.0.
 
 == Upgrade Notice ==
 
-= 1.0.0-rc.2 =
+= 1.0.0 =
 
 (2023/06/05) First release.
 
