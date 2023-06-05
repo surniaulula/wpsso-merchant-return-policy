@@ -57,7 +57,7 @@ if ( ! class_exists( 'WpssoMrpFiltersMessages' ) ) {
 
 				case 'tooltip-meta-mrp_methods':
 
-					$text = __( 'The types of return method offered.', 'wpsso-merchant-return-policy' ) . ' ';
+					$text = __( 'The return methods offered.', 'wpsso-merchant-return-policy' ) . ' ';
 
 					break;
 
@@ -71,7 +71,7 @@ if ( ! class_exists( 'WpssoMrpFiltersMessages' ) ) {
 
 					$text = __( 'The countries this return policy applies to.', 'wpsso-merchant-return-policy' ) . ' ';
 
-					$text .= __( 'You can select up to 25 countries.', 'wpsso-merchant-return-policy' ) . ' ';
+					$text .= sprintf( __( 'You can select up to %d countries.', 'wpsso-merchant-return-policy' ), WPSSOMRP_MRP_COUNTRIES_MAX ) . ' ';
 
 					break;
 			}

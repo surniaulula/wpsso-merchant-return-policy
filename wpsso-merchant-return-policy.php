@@ -10,7 +10,7 @@
  * Author URI: https://wpsso.com/
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
- * Description: Manage merchant return policies for Google rich results.
+ * Description: Manage any number of Merchant Return Policies for Google Merchant listings.
  * Requires Plugins: wpsso
  * Requires PHP: 7.2.5
  * Requires At Least: 5.5

@@ -49,7 +49,7 @@ if ( ! class_exists( 'WpssoMrpMrp' ) ) {
 			foreach ( $mrp_ids as $post_id ) {
 
 				$mrp_opts = $wpsso->post->get_options( $post_id );
-				$def_name = sprintf( _x( 'Return policy #%d', 'option value', 'wpsso-merchant-return-policy' ), $post_id );
+				$def_name = sprintf( _x( 'Return Policy #%d', 'option value', 'wpsso-merchant-return-policy' ), $post_id );
 				$mrp_name = empty( $mrp_opts[ 'mrp_name' ] ) ? $def_name : $mrp_opts[ 'mrp_name' ];
 
 				$local_cache[ 'mrp-' . $post_id ] = $mrp_name;

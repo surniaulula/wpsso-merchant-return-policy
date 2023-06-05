@@ -21,7 +21,7 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 					'opt_version' => '6',		// Increment when changing default option values.
 					'short'       => 'WPSSO MRP',	// Short plugin name.
 					'name'        => 'WPSSO Merchant Return Policy Manager',
-					'desc'        => 'Manage merchant return policies for Google rich results.',
+					'desc'        => 'Manage any number of Merchant Return Policies for Google Merchant listings.',
 					'slug'        => 'wpsso-merchant-return-policy',
 					'base'        => 'wpsso-merchant-return-policy/wpsso-merchant-return-policy.php',
 					'update_auth' => '',		// No premium version.
@@ -154,6 +154,7 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 			 */
 			$var_const[ 'WPSSOMRP_MRP_MENU_ORDER' ]        = 83;
 			$var_const[ 'WPSSOMRP_MRP_CATEGORY_TAXONOMY' ] = false;
+			$var_const[ 'WPSSOMRP_MRP_COUNTRIES_MAX' ]     = 50;
 
 			/*
 			 * Maybe override the default constant value with a pre-defined constant value.
