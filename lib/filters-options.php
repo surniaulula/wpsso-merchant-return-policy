@@ -27,7 +27,6 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 
 			$this->p->util->add_plugin_filters( $this, array(
 				'get_merchant_return_policy_options' => 3,
-				'get_defaults'                       => 1,
 				'get_post_defaults'                  => 4,
 				'get_post_options'                   => 3,
 				'save_post_options'                  => 3,
