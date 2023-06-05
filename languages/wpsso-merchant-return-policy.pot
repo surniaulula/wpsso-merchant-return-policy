@@ -44,7 +44,7 @@ msgid "Return Policy Name"
 msgstr ""
 
 #: lib/filters-edit.php:54
-msgid "This is the default product return policy."
+msgid "Default product return policy."
 msgstr ""
 
 #: lib/filters-edit.php:57
@@ -107,7 +107,7 @@ msgstr ""
 msgid "You can select up to 25 countries."
 msgstr ""
 
-#: lib/filters-options.php:89
+#: lib/filters-options.php:85
 msgctxt "option value"
 msgid "Return Policy #%d"
 msgstr ""

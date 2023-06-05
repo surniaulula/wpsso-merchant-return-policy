@@ -32,6 +32,7 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 				'get_post_options'                   => 3,
 				'save_post_options'                  => 3,
 				'option_type'                        => 2,
+				'plugin_upgrade_advanced_exclude'    => 1,
 			) );
 		}
 
@@ -46,13 +47,6 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 			}
 
 			return $mrp_opts;
-		}
-
-		public function filter_get_defaults( $defs ) {
-
-			$defs[ 'schema_def_product_mrp' ] = $this->p->options[ 'schema_def_product_mrp' ];
-
-			return $defs;
 		}
 
 		public function filter_get_post_defaults( $md_defs, $post_id, $rel, $mod ) {
@@ -84,6 +78,8 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 
 			if ( WPSSOMRP_MRP_POST_TYPE === $mod[ 'post_type' ] ) {
 
+				$mrp_id = 'mrp-' . $mod[ 'id' ];
+
 				if ( empty( $md_opts[ 'mrp_name' ] ) ) {	// Just in case.
 
 					$md_opts[ 'mrp_name' ] = sprintf( _x( 'Return Policy #%d', 'option value', 'wpsso-merchant-return-policy' ), $post_id );
@@ -100,10 +96,8 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 				SucomUtilWP::raw_update_post_title_content( $post_id, $md_opts[ 'mrp_name' ], $md_opts[ 'mrp_desc' ] );
 
 				/*
-				 * This is the default product return policy.
+				 * Default product return policy.
 				 */
-				$mrp_id = 'mrp-' . $mod[ 'id' ];
-
 				if ( empty( $md_opts[ 'mrp_is_def_product_mrp' ] ) && $mrp_id === $this->p->options[ 'schema_def_product_mrp' ] ) {
 
 					WpssoUtilReg::update_options_key( WPSSO_OPTIONS_NAME, 'schema_def_product_mrp', 'none' );
@@ -156,6 +150,13 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 			}
 
 			return $type;
+		}
+		
+		public function filter_plugin_upgrade_advanced_exclude( $adv_exclude ) {
+
+			$adv_exclude[] = 'schema_def_product_mrp';
+
+			return $adv_exclude;
 		}
 	}
 }
