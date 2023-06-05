@@ -26,7 +26,9 @@ Manage any number of Merchant Return Policies for Google Merchant listings.
 
 <!-- about -->
 
-**Manage any number of Merchant Return Policies** for Google Merchant listings.
+**Manage any number of Merchant Return Policies for Google Merchant listings.**
+
+Fixes the *Missing field "hasMerchantReturnPolicy"* warning for Google Merchant listings.
 
 <!-- /about -->
 
