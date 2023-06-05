@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssomrp' => array(			// Plugin acronym.
-					'version'     => '1.0.0-dev.11',	// Plugin version.
+					'version'     => '1.0.0-b.1',	// Plugin version.
 					'opt_version' => '6',		// Increment when changing default option values.
 					'short'       => 'WPSSO MRP',	// Short plugin name.
 					'name'        => 'WPSSO Merchant Return Policy Manager',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '15.13.0-dev.11',
+							'min_version'   => '15.13.0-b.1',
 						),
 					),
 
@@ -69,6 +69,7 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 			'opt' => array(
 				'mrp_md_defaults' => array(
 					'mrp_name'                                 => '',
+					'mrp_is_def_product_mrp'                   => 0,
 					'mrp_category'                             => 'https://schema.org/MerchantReturnUnspecified',
 					'mrp_days'                                 => 30,
 					'mrp_method_https_schema_org_ReturnByMail' => 1,

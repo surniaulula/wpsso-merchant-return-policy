@@ -49,6 +49,10 @@ if ( ! class_exists( 'WpssoMrpFiltersEdit' ) ) {
 					'tooltip' => 'meta-mrp_name',
 					'content' => $form->get_input( 'mrp_name', $css_class = 'wide' ),
 				),
+				'mrp_defaults' => array(
+					'content' => $form->get_checkbox( 'mrp_is_def_product_mrp' ) . ' ' .
+						__( 'This is the default product return policy.', 'wpsso-merchant-return-policy' ),
+				),
 				'mrp_category' => array(
 					'label'   => _x( 'Return Policy Category', 'option label', 'wpsso-merchant-return-policy' ),
 					'tooltip' => 'meta-mrp_category',

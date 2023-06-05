@@ -27,6 +27,7 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 
 			$this->p->util->add_plugin_filters( $this, array(
 				'get_merchant_return_policy_options' => 3,
+				'get_defaults'                       => 1,
 				'get_post_defaults'                  => 4,
 				'get_post_options'                   => 3,
 				'save_post_options'                  => 3,
@@ -47,11 +48,25 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 			return $mrp_opts;
 		}
 
+		public function filter_get_defaults( $defs ) {
+
+			$defs[ 'schema_def_product_mrp' ] = $this->p->options[ 'schema_def_product_mrp' ];
+
+			return $defs;
+		}
+
 		public function filter_get_post_defaults( $md_defs, $post_id, $rel, $mod ) {
+
+			$mrp_id = 'mrp-' . $mod[ 'id' ];
 
 			$md_defs = array_merge( $md_defs, $this->p->cf[ 'opt' ][ 'mrp_md_defaults' ] );
 
 			$md_defs[ 'mrp_shipping_currency' ] = $this->p->get_options( 'og_def_currency', 'USD' );
+
+			if ( $mrp_id === $this->p->options[ 'schema_def_product_mrp' ] ) {
+
+				$md_defs[ 'mrp_is_def_product_mrp' ] = 1;
+			}
 
 			return $md_defs;
 		}
@@ -83,6 +98,22 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 				 * Always keep the post title, slug, and content updated.
 				 */
 				SucomUtilWP::raw_update_post_title_content( $post_id, $md_opts[ 'mrp_name' ], $md_opts[ 'mrp_desc' ] );
+
+				/*
+				 * This is the default product return policy.
+				 */
+				$mrp_id = 'mrp-' . $mod[ 'id' ];
+
+				if ( empty( $md_opts[ 'mrp_is_def_product_mrp' ] ) && $mrp_id === $this->p->options[ 'schema_def_product_mrp' ] ) {
+
+					WpssoUtilReg::update_options_key( WPSSO_OPTIONS_NAME, 'schema_def_product_mrp', 'none' );
+
+				} elseif ( $mrp_id !== $this->p->options[ 'schema_def_product_mrp' ] ) {
+						
+					WpssoUtilReg::update_options_key( WPSSO_OPTIONS_NAME, 'schema_def_product_mrp', $mrp_id );
+				}
+
+				unset( $md_opts[ 'mrp_is_def_product_mrp' ] );
 			}
 
 			return $md_opts;
