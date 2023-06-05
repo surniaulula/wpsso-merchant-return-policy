@@ -76,7 +76,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.0.0-b.1 (2023/06/04)**
+**Version 1.0.0-b.2 (2023/06/04)**
 
 * **New Features**
 	* First release.
@@ -89,11 +89,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.5.
 	* WordPress v5.5.
-	* WPSSO Core v15.13.0-b.1.
+	* WPSSO Core v15.13.0-b.2.
 
 == Upgrade Notice ==
 
-= 1.0.0-b.1 =
+= 1.0.0-b.2 =
 
 (2023/06/04) First release.
 
