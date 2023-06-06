@@ -84,12 +84,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.0.1-dev.1 (2023/06/05)**
+**Version 1.0.1-dev.2 (2023/06/06)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Minor update to standardize code with the WPSSO OPM add-on.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -116,9 +116,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.0.1-dev.1 =
+= 1.0.1-dev.2 =
 
-(2023/06/05) None.
+(2023/06/06) Minor update to standardize code with the WPSSO OPM add-on.
 
 = 1.0.0 =
 
