@@ -58,7 +58,7 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 
 			if ( $mrp_id === $this->p->options[ 'schema_def_product_mrp' ] ) {
 
-				$md_defs[ 'mrp_is_def_product_mrp' ] = 1;
+				$md_defs[ 'mrp_is_schema_def_product_mrp' ] = 1;
 			}
 
 			return $md_defs;
@@ -97,7 +97,7 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 				/*
 				 * Default product return policy.
 				 */
-				if ( empty( $md_opts[ 'mrp_is_def_product_mrp' ] ) && $mrp_id === $this->p->options[ 'schema_def_product_mrp' ] ) {
+				if ( empty( $md_opts[ 'mrp_is_schema_def_product_mrp' ] ) && $mrp_id === $this->p->options[ 'schema_def_product_mrp' ] ) {
 
 					WpssoUtilReg::update_options_key( WPSSO_OPTIONS_NAME, 'schema_def_product_mrp', 'none' );
 
@@ -106,7 +106,7 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 					WpssoUtilReg::update_options_key( WPSSO_OPTIONS_NAME, 'schema_def_product_mrp', $mrp_id );
 				}
 
-				unset( $md_opts[ 'mrp_is_def_product_mrp' ] );
+				unset( $md_opts[ 'mrp_is_schema_def_product_mrp' ] );
 			}
 
 			return $md_opts;
