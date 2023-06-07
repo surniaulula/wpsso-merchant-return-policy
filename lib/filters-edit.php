@@ -50,10 +50,7 @@ if ( ! class_exists( 'WpssoMrpFiltersEdit' ) ) {
 					'content' => $form->get_input( 'mrp_name', $css_class = 'wide' ),
 				),
 				'mrp_defaults' => array(
-					'content' => $form->get_checklist( 'mrp_is', array(
-						// Translators: Please ignore - translation uses a different text domain.
-						'schema_def_product_mrp' => _x( 'Default Product Return Policy', 'option label', 'wpsso' ),
-					) ),
+					'content' => $form->get_checklist( 'mrp_is', $this->p->cf[ 'form' ][ 'mrp_is_defaults' ] ),
 				),
 				'mrp_category' => array(
 					'label'   => _x( 'Return Policy Category', 'option label', 'wpsso-merchant-return-policy' ),

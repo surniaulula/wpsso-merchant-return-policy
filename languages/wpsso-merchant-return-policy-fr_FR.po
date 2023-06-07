@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Merchant Return Policy Manager 1.0.0\n"
+"Project-Id-Version: WPSSO Merchant Return Policy Manager 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-merchant-return-policy\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-06-05 12:07-0700\n"
+"PO-Revision-Date: 2023-06-06 17:20-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -36,36 +36,37 @@ msgctxt "plugin name"
 msgid "WPSSO Core"
 msgstr "WPSSO Core"
 
+#: gettext/gettext-lib-config.php:8
+msgctxt "option value"
+msgid "Default Product Return Policy"
+msgstr "Politique retour de produit par défaut"
+
 #: lib/filters-edit.php:48
 msgctxt "option label"
 msgid "Return Policy Name"
 msgstr "Nom de politique de retour"
 
-#: lib/filters-edit.php:54
-msgid "Default product return policy."
-msgstr "Politique retour de produit par défaut."
-
-#: lib/filters-edit.php:57
+#: lib/filters-edit.php:56
 msgctxt "option label"
 msgid "Return Policy Category"
 msgstr "Catégorie politique de retour"
 
-#: lib/filters-edit.php:66
+#: lib/filters-edit.php:65
 msgctxt "option label"
 msgid "Return Window Days"
 msgstr "Jours fenêtre de retour"
 
-#: lib/filters-edit.php:76
+#: lib/filters-edit.php:75
 msgctxt "option label"
 msgid "Return Methods"
 msgstr "Méthodes de retour"
 
-#: lib/filters-edit.php:84
+#: lib/filters-edit.php:83
 msgctxt "option label"
 msgid "Return Shipping Fees"
 msgstr "Frais de retour"
 
-#: lib/filters-edit.php:89
+#: lib/filters-edit.php:88
 msgctxt "option label"
 msgid "Applicable Countries"
 msgstr "Pays concernés"
@@ -102,7 +103,7 @@ msgstr "Les pays auxquels cette politique de retour s'applique."
 msgid "You can select up to %d countries."
 msgstr "Vous pouvez sélectionner jusqu'à %d pays."
 
-#: lib/filters-options.php:84 lib/mrp.php:52
+#: lib/filters-options.php:87 lib/mrp.php:52
 msgctxt "option value"
 msgid "Return Policy #%d"
 msgstr "Politique de retour #%d"

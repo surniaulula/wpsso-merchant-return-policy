@@ -56,9 +56,12 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 
 			$md_defs[ 'mrp_shipping_currency' ] = $this->p->get_options( 'og_def_currency', 'USD' );
 
-			if ( $mrp_id === $this->p->options[ 'schema_def_product_mrp' ] ) {
+			/*
+			 * Check if this return policy ID is in some default options.
+			 */
+			foreach ( $this->p->cf[ 'form' ][ 'mrp_is_defaults' ] as $opts_key => $opts_label ) {
 
-				$md_defs[ 'mrp_is_schema_def_product_mrp' ] = 1;
+				$md_defs[ 'mrp_is_' . $opts_key ] = $mrp_id === $this->p->options[ $opts_key ] ? 1 : 0;
 			}
 
 			return $md_defs;
@@ -95,18 +98,24 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 				SucomUtilWP::raw_update_post_title_content( $post_id, $md_opts[ 'mrp_name' ], $md_opts[ 'mrp_desc' ] );
 
 				/*
-				 * Default product return policy.
+				 * Check if some default options need to be updated.
 				 */
-				if ( empty( $md_opts[ 'mrp_is_schema_def_product_mrp' ] ) && $mrp_id === $this->p->options[ 'schema_def_product_mrp' ] ) {
+				foreach ( $this->p->cf[ 'form' ][ 'mrp_is_defaults' ] as $opts_key => $opts_label ) {
 
-					WpssoUtilReg::update_options_key( WPSSO_OPTIONS_NAME, 'schema_def_product_mrp', 'none' );
+					if ( empty( $md_opts[ 'mrp_is_' . $opts_key ] ) ) {	// Checkbox is unchecked.
 
-				} elseif ( $mrp_id !== $this->p->options[ 'schema_def_product_mrp' ] ) {
-						
-					WpssoUtilReg::update_options_key( WPSSO_OPTIONS_NAME, 'schema_def_product_mrp', $mrp_id );
+						if ( $mrp_id === $this->p->options[ $opts_key ] ) {	// Maybe remove the existing return policy ID.
+
+							WpssoUtilReg::update_options_key( WPSSO_OPTIONS_NAME, $opts_key, 'none' );
+						}
+
+					} elseif ( $mrp_id !== $this->p->options[ $opts_key ] ) {	// Maybe change the existing return policy ID.
+
+						WpssoUtilReg::update_options_key( WPSSO_OPTIONS_NAME, $opts_key, $mrp_id );
+					}
+
+					unset( $md_opts[ 'mrp_is_' . $opts_key ] );
 				}
-
-				unset( $md_opts[ 'mrp_is_schema_def_product_mrp' ] );
 			}
 
 			return $md_opts;
@@ -133,24 +142,25 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 				case 'mrp_shipping_currency':
 
 					return 'not_blank';
-				
+
 				case 'mrp_days':
-					
+
 					return 'zero_pos_int';
 
 				case 'mrp_shipping_fees':
-					
+
 					return 'numeric';
 
+				case ( 0 === strpos( $base_key, 'mrp_is_' ) ? true : false ):
 				case ( 0 === strpos( $base_key, 'mrp_country_' ) ? true : false ):
 				case ( 0 === strpos( $base_key, 'mrp_method_' ) ? true : false ):
-					
+
 					return 'checkbox';
 			}
 
 			return $type;
 		}
-		
+
 		public function filter_plugin_upgrade_advanced_exclude( $adv_exclude ) {
 
 			$adv_exclude[] = 'schema_def_product_mrp';
