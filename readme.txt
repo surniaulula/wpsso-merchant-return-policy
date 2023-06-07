@@ -78,7 +78,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.0.1-rc.1 (2023/06/06)**
+**Version 1.0.1 (2023/06/06)**
 
 * **New Features**
 	* None.
@@ -110,7 +110,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.0.1-rc.1 =
+= 1.0.1 =
 
 (2023/06/06) Minor update to standardize code with the WPSSO OPM add-on.
 
