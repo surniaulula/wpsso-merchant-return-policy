@@ -9,7 +9,7 @@
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>6.2.2</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
 <tr><th align="right" valign="top" nowrap>License</th><td><a href="https://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
-<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>schema, hasMerchantReturnPolicy, MerchantReturnPolicy, product, merchant, return, policy</td></tr>
+<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>schema, return policy, hasMerchantReturnPolicy, product, merchant, return, policy</td></tr>
 </table>
 
 <h2>Description</h2>
@@ -18,7 +18,7 @@
 
 <p><strong>Manage any number of Merchant Return Policies for Google Merchant listings.</strong></p>
 
-<p><strong>Fixes the <em>Missing field "hasMerchantReturnPolicy"</em> warning for Google Merchant listings.</strong></p>
+<p><strong>Fixes the <em>Missing field "hasMerchantReturnPolicy" (in "offers")</em> warning for Google Merchant listings.</strong></p>
 
 <!-- /about -->
 
