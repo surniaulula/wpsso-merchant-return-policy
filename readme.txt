@@ -6,7 +6,7 @@ Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://surniaulula.github.io/wpsso-merchant-return-policy/assets/
-Tags: schema, return policy, hasMerchantReturnPolicy, product, merchant, return, policy
+Tags: schema, return policy, merchant, woocommerce, product, hasMerchantReturnPolicy
 Contributors: jsmoriss
 Requires Plugins: wpsso
 Requires PHP: 7.2.5
@@ -23,6 +23,10 @@ Manage any number of Merchant Return Policies for Google Merchant listings.
 **Manage any number of Merchant Return Policies for Google Merchant listings.**
 
 **Fixes the *Missing field "hasMerchantReturnPolicy" (in "offers")* warning for Google Merchant listings.**
+
+**E-Commerce Plugin Optional:**
+
+WooCommerce is suggested but not required - the WPSSO Merchant Return Policy Manager add-on can also provide return policy markup for custom product pages.
 
 <!-- /about -->
 
