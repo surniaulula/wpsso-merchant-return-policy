@@ -164,7 +164,7 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 		public function filter_plugin_upgrade_advanced_exclude( $adv_exclude ) {
 
 			foreach ( $this->p->cf[ 'form' ][ 'mrp_is_defaults' ] as $opts_key => $opts_label ) {
-			
+
 				$adv_exclude[] = $opts_key;
 			}
 
