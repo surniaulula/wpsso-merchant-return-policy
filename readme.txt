@@ -9,7 +9,7 @@ Assets URI: https://surniaulula.github.io/wpsso-merchant-return-policy/assets/
 Tags: schema, return policy, merchant, woocommerce, product, hasMerchantReturnPolicy
 Contributors: jsmoriss
 Requires Plugins: wpsso
-Requires PHP: 7.2.5
+Requires PHP: 7.2.34
 Requires At Least: 5.5
 Tested Up To: 6.2.2
 Stable Tag: 1.0.1
@@ -93,7 +93,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* None.
 * **Requires At Least**
-	* PHP v7.2.5.
+	* PHP v7.2.34.
 	* WordPress v5.5.
 	* WPSSO Core v15.13.0.
 
@@ -108,7 +108,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* None.
 * **Requires At Least**
-	* PHP v7.2.5.
+	* PHP v7.2.
 	* WordPress v5.5.
 	* WPSSO Core v15.13.0.
 
