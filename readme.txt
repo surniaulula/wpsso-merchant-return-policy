@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires Plugins: wpsso
 Requires PHP: 7.2.34
 Requires At Least: 5.5
-Tested Up To: 6.2.2
+Tested Up To: 6.3.0
 Stable Tag: 1.0.1
 
 Manage any number of Merchant Return Policies for Google Merchant listings.
