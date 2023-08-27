@@ -82,7 +82,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.1.0-b.1 (2023/08/27)**
+**Version 1.1.0-rc.1 (2023/08/27)**
 
 * **New Features**
 	* None.
@@ -95,7 +95,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.5.
-	* WPSSO Core v15.21.0-b.1.
+	* WPSSO Core v15.21.0-rc.1.
 
 **Version 1.0.1 (2023/06/06)**
 
@@ -129,7 +129,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.1.0-b.1 =
+= 1.1.0-rc.1 =
 
 (2023/08/27) Updated the 'wpsso_get_post_defaults' filter arguments for WPSSO Core v15.21.0.
 
