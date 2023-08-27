@@ -27,7 +27,7 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 
 			$this->p->util->add_plugin_filters( $this, array(
 				'get_merchant_return_policy_options' => 3,
-				'get_post_defaults'                  => 4,
+				'get_post_defaults'                  => 3,
 				'get_post_options'                   => 3,
 				'save_post_options'                  => 3,
 				'option_type'                        => 2,
@@ -48,7 +48,7 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 			return $mrp_opts;
 		}
 
-		public function filter_get_post_defaults( $md_defs, $post_id, $rel, $mod ) {
+		public function filter_get_post_defaults( array $md_defs, $post_id, array $mod ) {
 
 			$mrp_id = 'mrp-' . $mod[ 'id' ];
 
@@ -69,7 +69,7 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 
 		public function filter_get_post_options( array $md_opts, $post_id, array $mod ) {
 
-			$md_defs = $this->filter_get_post_defaults( array(), $post_id, $rel = '', $mod );
+			$md_defs = $this->filter_get_post_defaults( array(), $post_id, $mod );
 
 			$md_opts = array_merge( $md_defs, $md_opts );
 
