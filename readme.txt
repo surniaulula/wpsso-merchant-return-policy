@@ -1,5 +1,5 @@
 === WPSSO Merchant Return Policy Manager ===
-Plugin Name: WPSSO Merchant Return Policy Manager 
+Plugin Name: WPSSO Merchant Return Policy Manager
 Plugin Slug: wpsso-merchant-return-policy
 Text Domain: wpsso-merchant-return-policy
 Domain Path: /languages
