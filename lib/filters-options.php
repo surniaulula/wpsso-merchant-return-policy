@@ -106,12 +106,12 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 
 						if ( $mrp_id === $this->p->options[ $opts_key ] ) {	// Maybe remove the existing return policy ID.
 
-							WpssoUtilReg::update_options_key( WPSSO_OPTIONS_NAME, $opts_key, 'none' );
+							WpssoUtilWP::update_options_key( WPSSO_OPTIONS_NAME, $opts_key, 'none' );
 						}
 
 					} elseif ( $mrp_id !== $this->p->options[ $opts_key ] ) {	// Maybe change the existing return policy ID.
 
-						WpssoUtilReg::update_options_key( WPSSO_OPTIONS_NAME, $opts_key, $mrp_id );
+						WpssoUtilWP::update_options_key( WPSSO_OPTIONS_NAME, $opts_key, $mrp_id );
 					}
 
 					unset( $md_opts[ 'mrp_is_' . $opts_key ] );
