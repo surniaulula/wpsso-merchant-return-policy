@@ -82,7 +82,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.2.0-rc.1 (2023/10/28)**
+**Version 1.2.0 (2023/10/28)**
 
 * **New Features**
 	* None.
@@ -95,7 +95,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.5.
-	* WPSSO Core v16.5.0-rc.1.
+	* WPSSO Core v16.5.0.
 
 **Version 1.1.0 (2023/08/27)**
 
@@ -144,7 +144,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.2.0-rc.1 =
+= 1.2.0 =
 
 (2023/10/28) Update for deprecated method.
 
