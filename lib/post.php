@@ -41,13 +41,13 @@ if ( ! class_exists( 'WpssoMrpPost' ) && class_exists( 'WpssoPost' ) ) {
 			/*
 			 * This hook is fired once WP, all plugins, and the theme are fully loaded and instantiated.
 			 */
-			add_action( 'wp_loaded', array( $this, 'add_wp_hooks' ) );
+			add_action( 'wp_loaded', array( $this, 'add_wp_callbacks' ) );
 		}
 
 		/*
 		 * Add WordPress action and filters hooks.
 		 */
-		public function add_wp_hooks() {
+		public function add_wp_callbacks() {
 
 			$is_admin = is_admin();	// Only check once.
 
@@ -64,7 +64,8 @@ if ( ! class_exists( 'WpssoMrpPost' ) && class_exists( 'WpssoPost' ) ) {
 
 			$post_id = empty( $post_obj->ID ) ? 0 : $post_obj->ID;
 
-			if ( ( 'page' === $post_type && ! current_user_can( 'edit_page', $post_id ) ) || ! current_user_can( 'edit_post', $post_id ) ) {
+			if ( ( 'page' === $post_type && ! current_user_can( 'edit_page', $post_id ) ) || 
+				! current_user_can( 'edit_post', $post_id ) ) {
 
 				return;
 			}
