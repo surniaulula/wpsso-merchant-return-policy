@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Merchant Return Policy Manager 1.2.0\n"
+"Project-Id-Version: WPSSO Merchant Return Policy Manager 1.3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-merchant-return-policy\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-10-27 09:20-0700\n"
+"PO-Revision-Date: 2023-11-03 21:28-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -124,7 +124,7 @@ msgstr "La politique de retour ID #%s n'existe pas."
 msgid "Please select a different return policy."
 msgstr "Veuillez sélectionner une autre politique de retour."
 
-#: lib/post.php:82
+#: lib/post.php:83
 msgctxt "metabox title"
 msgid "Return Policy"
 msgstr "Politique de retour"
