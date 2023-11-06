@@ -107,21 +107,29 @@ if ( ! class_exists( 'WpssoMrpPost' ) && class_exists( 'WpssoPost' ) ) {
 
 		public function get_metabox_for_metabox_id( $post_obj, $metabox_id ) {
 
-			$container_id = 'wpsso_metabox_' . $metabox_id . '_inside';
-			$mod          = $this->get_mod( $post_obj->ID );
-			$opts         = $this->get_options( $post_obj->ID );
-			$def_opts     = $this->get_defaults( $post_obj->ID );
+			$mod      = $this->p->page->get_mod( $use_post = false, $mod = false, $post_obj );
+			$opts     = $this->get_options( $post_obj->ID );
+			$def_opts = $this->get_defaults( $post_obj->ID );
 
 			$this->form = new SucomForm( $this->p, WPSSO_META_NAME, $opts, $def_opts, $this->p->id );
 
 			wp_nonce_field( WpssoAdmin::get_nonce_action(), WPSSO_NONCE_NAME );
 
-			$filter_name = 'wpsso_metabox_' . $metabox_id . '_meta_rows';
+			$filter_name = 'wpsso_mb_' . $metabox_id . '_rows';
+
+			if ( $this->p->debug->enabled ) {
+
+				$this->p->debug->log( 'applying filters \'' . $filter_name . '\'' );
+			}
 
 			$table_rows = apply_filters( $filter_name, array(), $this->form, array(), $mod );
 
+			$container_id = 'wpsso_mb_' . $metabox_id . '_inside';
+
 			$metabox_html = "\n" . '<div id="' . $container_id . '">';
+
 			$metabox_html .= $this->p->util->metabox->get_table( $table_rows, 'wpsso-' . $metabox_id );
+
 			$metabox_html .= '</div><!-- #'. $container_id . ' -->' . "\n";
 
 			return $metabox_html;

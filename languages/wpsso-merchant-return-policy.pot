@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Merchant Return Policy Manager package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Merchant Return Policy Manager 2.0.0-dev.13\n"
+"Project-Id-Version: WPSSO Merchant Return Policy Manager 2.0.0-dev.14\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-merchant-"
 "return-policy\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
@@ -44,32 +44,32 @@ msgctxt "option value"
 msgid "Default Product Return Policy"
 msgstr ""
 
-#: lib/filters-edit.php:48
+#: lib/filters-edit.php:49
 msgctxt "option label"
 msgid "Return Policy Name"
 msgstr ""
 
-#: lib/filters-edit.php:56
+#: lib/filters-edit.php:59
 msgctxt "option label"
 msgid "Return Policy Category"
 msgstr ""
 
-#: lib/filters-edit.php:65
+#: lib/filters-edit.php:69
 msgctxt "option label"
 msgid "Return Window Days"
 msgstr ""
 
-#: lib/filters-edit.php:75
+#: lib/filters-edit.php:80
 msgctxt "option label"
 msgid "Return Methods"
 msgstr ""
 
-#: lib/filters-edit.php:83
+#: lib/filters-edit.php:89
 msgctxt "option label"
 msgid "Return Shipping Fees"
 msgstr ""
 
-#: lib/filters-edit.php:88
+#: lib/filters-edit.php:95
 msgctxt "option label"
 msgid "Applicable Countries"
 msgstr ""
