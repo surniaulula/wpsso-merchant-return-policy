@@ -82,43 +82,24 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.0.0 (2021/11/08)**
+**Version 2.0.1 (2021/11/20)**
 
 * **New Features**
 	* None.
 * **Improvements**
 	* None.
 * **Bugfixes**
-	* None.
+	* Fixed class not found error in lib/filters-options.php.
 * **Developer Notes**
-	* Refactored the settings page and metabox load process for WPSSO Core v17.0.0.
+	* None.
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.5.
-	* WPSSO Core v17.0.0.
-
-**Version 1.2.0 (2023/10/28)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Update for deprecated method.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Changed deprecated `WpssoUtilReg::update_options_key()` call for `WpssoUtilWP::update_options_key()`.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.5.
-	* WPSSO Core v16.5.0.
+	* WPSSO Core v17.2.1.
 
 == Upgrade Notice ==
 
-= 2.0.0 =
+= 2.0.1 =
 
-(2021/11/08) Refactored the settings page and metabox load process for WPSSO Core v17.0.0.
-
-= 1.2.0 =
-
-(2023/10/28) Update for deprecated method.
+(2021/11/20) Fixed class not found error in lib/filters-options.php.
 
