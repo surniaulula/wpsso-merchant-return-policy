@@ -64,7 +64,7 @@ if ( ! class_exists( 'WpssoMrpPost' ) && class_exists( 'WpssoPost' ) ) {
 
 			$post_id = empty( $post_obj->ID ) ? 0 : $post_obj->ID;
 
-			if ( ( 'page' === $post_type && ! current_user_can( 'edit_page', $post_id ) ) || 
+			if ( ( 'page' === $post_type && ! current_user_can( 'edit_page', $post_id ) ) ||
 				! current_user_can( 'edit_post', $post_id ) ) {
 
 				return;
