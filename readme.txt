@@ -82,7 +82,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.0.1 (2021/11/20)**
+**Version 2.0.1 (2023/11/20)**
 
 * **New Features**
 	* None.
@@ -101,5 +101,5 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.0.1 =
 
-(2021/11/20) Fixed class not found error in lib/filters-options.php.
+(2023/11/20) Fixed class not found error in lib/filters-options.php.
 
