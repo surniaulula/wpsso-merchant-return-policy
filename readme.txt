@@ -6,7 +6,7 @@ Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://surniaulula.github.io/wpsso-merchant-return-policy/assets/
-Tags: schema, return policy, merchant, woocommerce, product, hasMerchantReturnPolicy
+Tags: schema, return policy, merchant, woocommerce, hasMerchantReturnPolicy
 Contributors: jsmoriss
 Requires Plugins: wpsso
 Requires PHP: 7.2.34
