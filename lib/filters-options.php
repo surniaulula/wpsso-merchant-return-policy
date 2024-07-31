@@ -37,6 +37,11 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 
 		public function filter_get_merchant_return_policy_options( $mrp_opts, $mod, $mrp_id ) {
 
+			if ( $this->p->debug->enabled ) {
+
+				$this->p->debug->mark();
+			}
+
 			if ( false === $mrp_opts ) {	// First come, first served.
 
 				if ( 0 === strpos( $mrp_id, 'mrp-' ) ) {
@@ -49,6 +54,11 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 		}
 
 		public function filter_get_post_defaults( array $md_defs, $post_id, array $mod ) {
+
+			if ( $this->p->debug->enabled ) {
+
+				$this->p->debug->mark();
+			}
 
 			$mrp_id = 'mrp-' . $mod[ 'id' ];
 
@@ -69,6 +79,11 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 
 		public function filter_get_post_options( array $md_opts, $post_id, array $mod ) {
 
+			if ( $this->p->debug->enabled ) {
+
+				$this->p->debug->mark();
+			}
+
 			$md_defs = $this->filter_get_post_defaults( array(), $post_id, $mod );
 
 			$md_opts = array_merge( $md_defs, $md_opts );
@@ -77,6 +92,11 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 		}
 
 		public function filter_save_post_options( array $md_opts, $post_id, array $mod ) {
+
+			if ( $this->p->debug->enabled ) {
+
+				$this->p->debug->mark();
+			}
 
 			if ( WPSSOMRP_MRP_POST_TYPE === $mod[ 'post_type' ] ) {
 
@@ -126,6 +146,11 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 		 */
 		public function filter_option_type( $type, $base_key ) {
 
+			if ( $this->p->debug->enabled ) {
+
+				$this->p->debug->mark();
+			}
+
 			if ( ! empty( $type ) ) {	// Return early if we already have a type.
 
 				return $type;
@@ -165,6 +190,11 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 		}
 
 		public function filter_plugin_upgrade_advanced_exclude( $adv_exclude ) {
+
+			if ( $this->p->debug->enabled ) {
+
+				$this->p->debug->mark();
+			}
 
 			foreach ( $this->p->cf[ 'form' ][ 'mrp_is_defaults' ] as $opts_key => $opts_label ) {
 
