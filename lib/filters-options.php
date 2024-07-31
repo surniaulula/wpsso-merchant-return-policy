@@ -60,7 +60,7 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$mrp_id = 'mrp-' . $mod[ 'id' ];
+			$mrp_id = 'mrp-' . $post_id;
 
 			$md_defs = array_merge( $md_defs, $this->p->cf[ 'opt' ][ 'mrp_md_defaults' ] );
 
@@ -71,7 +71,16 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 			 */
 			foreach ( $this->p->cf[ 'form' ][ 'mrp_is_defaults' ] as $opts_key => $opts_label ) {
 
-				$md_defs[ 'mrp_is_' . $opts_key ] = $mrp_id === $this->p->options[ $opts_key ] ? 1 : 0;
+				if ( isset( $this->p->options[ $opts_key ] ) && $mrp_id === $this->p->options[ $opts_key ] ) {
+
+					$md_defs[ 'mrp_is_' . $opts_key ] = 1;
+
+				} else $md_defs[ 'mrp_is_' . $opts_key ] = 0;
+
+				if ( $this->p->debug->enabled ) {
+
+					$this->p->debug->log( 'setting mrp_is_' . $opts_key . ' = ' . $md_defs[ 'mrp_is_' .  $opts_key ] );
+				}
 			}
 
 			return $md_defs;
@@ -100,7 +109,7 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 
 			if ( WPSSOMRP_MRP_POST_TYPE === $mod[ 'post_type' ] ) {
 
-				$mrp_id = 'mrp-' . $mod[ 'id' ];
+				$mrp_id = 'mrp-' . $post_id;
 
 				if ( empty( $md_opts[ 'mrp_name' ] ) ) {	// Just in case.
 
@@ -126,15 +135,13 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 
 						if ( $mrp_id === $this->p->options[ $opts_key ] ) {	// Maybe remove the existing return policy ID.
 
-							SucomUtilWP::update_options_key( WPSSO_OPTIONS_NAME, $opts_key, 'none' );
+							$this->p->options[ $opts_key ] = 'none';
 						}
 
 					} elseif ( $mrp_id !== $this->p->options[ $opts_key ] ) {	// Maybe change the existing return policy ID.
 
-						SucomUtilWP::update_options_key( WPSSO_OPTIONS_NAME, $opts_key, $mrp_id );
+						$this->p->options[ $opts_key ] = $mrp_id;
 					}
-
-					unset( $md_opts[ 'mrp_is_' . $opts_key ] );
 				}
 			}
 
@@ -167,15 +174,16 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 					return 'ok_blank';
 
 				case 'mrp_category':
+				case 'mrp_return_fees':
 				case 'mrp_shipping_currency':
 
 					return 'not_blank';
 
-				case 'mrp_days':
+				case 'mrp_return_days':
 
 					return 'zero_pos_int';
 
-				case 'mrp_shipping_fees':
+				case 'mrp_shipping_amount':
 
 					return 'numeric';
 

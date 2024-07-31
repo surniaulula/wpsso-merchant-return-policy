@@ -32,9 +32,12 @@ if ( ! class_exists( 'WpssoMrpFiltersMessages' ) ) {
 
 		public function filter_messages_tooltip_meta_mrp( $text, $msg_key, $info ) {
 
+			/*
+			 * See https://developers.google.com/search/docs/appearance/structured-data/merchant-listing#returns.
+			 */
 			switch ( $msg_key ) {
 
-				case 'tooltip-meta-mrp_name':
+				case 'tooltip-meta-mrp_name':	// Return Policy Name.
 
 					$text = __( 'A name for this return policy (required).', 'wpsso-merchant-return-policy' ) . ' ';
 
@@ -43,31 +46,37 @@ if ( ! class_exists( 'WpssoMrpFiltersMessages' ) ) {
 
 					break;
 
-				case 'tooltip-meta-mrp_category':
+				case 'tooltip-meta-mrp_category':	// Return Policy Category.
 
 					$text = __( 'The type of return policy.', 'wpsso-merchant-return-policy' ) . ' ';
 
 					break;
 
-				case 'tooltip-meta-mrp_days':
+				case 'tooltip-meta-mrp_return_days':	// Return Window Days.
 
-					$text = __( 'The number of days (from the delivery date) that a product can be returned.', 'wpsso-merchant-return-policy' ) . ' ';
-
-					break;
-
-				case 'tooltip-meta-mrp_methods':
-
-					$text = __( 'The return methods offered.', 'wpsso-merchant-return-policy' ) . ' ';
+					$text = __( 'The number of days from the delivery date that a product can be returned.', 'wpsso-merchant-return-policy' ) . ' ';
 
 					break;
 
-				case 'tooltip-meta-mrp_shipping_fees':
+				case 'tooltip-meta-mrp_methods':	// Return Methods.
 
-					$text = __( 'The cost of shipping for product returns.', 'wpsso-merchant-return-policy' ) . ' ';
+					$text = __( 'The type of return methods offered.', 'wpsso-merchant-return-policy' ) . ' ';
 
 					break;
 
-				case 'tooltip-meta-mrp_countries':
+				case 'tooltip-meta-mrp_return_fees':	// Shipping Fees.
+
+					$text = __( 'The type of return fees.', 'wpsso-merchant-return-policy' ) . ' ';
+
+					break;
+
+				case 'tooltip-meta-mrp_shipping_fees':	// Shipping Fees.
+
+					$text = __( 'The cost of shipping for returning a product.', 'wpsso-merchant-return-policy' ) . ' ';
+
+					break;
+
+				case 'tooltip-meta-mrp_countries':	// Applicable Countries.
 
 					$text = __( 'The countries this return policy applies to.', 'wpsso-merchant-return-policy' ) . ' ';
 

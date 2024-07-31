@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Merchant Return Policy Manager package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Merchant Return Policy Manager 2.1.0\n"
+"Project-Id-Version: WPSSO Merchant Return Policy Manager 2.2.0-dev.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-merchant-"
 "return-policy\n"
 "POT-Creation-Date: 2024-MO-DA HO:MI+ZONE\n"
@@ -66,50 +66,59 @@ msgstr ""
 
 #: lib/filters-edit.php:89
 msgctxt "option label"
-msgid "Return Shipping Fees"
+msgid "Return Fees"
 msgstr ""
 
-#: lib/filters-edit.php:95
+#: lib/filters-edit.php:101
+msgctxt "option label"
+msgid "Shipping Fees"
+msgstr ""
+
+#: lib/filters-edit.php:107
 msgctxt "option label"
 msgid "Applicable Countries"
 msgstr ""
 
-#: lib/filters-messages.php:39
+#: lib/filters-messages.php:42
 msgid "A name for this return policy (required)."
 msgstr ""
 
-#: lib/filters-messages.php:41
+#: lib/filters-messages.php:44
 msgid ""
 "The return policy name may appear in WordPress editing pages and in the "
 "Schema MerchantReturnPolicy \"name\" property."
 msgstr ""
 
-#: lib/filters-messages.php:48
+#: lib/filters-messages.php:51
 msgid "The type of return policy."
 msgstr ""
 
-#: lib/filters-messages.php:54
+#: lib/filters-messages.php:57
 msgid ""
-"The number of days (from the delivery date) that a product can be returned."
+"The number of days from the delivery date that a product can be returned."
 msgstr ""
 
-#: lib/filters-messages.php:60
-msgid "The return methods offered."
+#: lib/filters-messages.php:63
+msgid "The type of return methods offered."
 msgstr ""
 
-#: lib/filters-messages.php:66
-msgid "The cost of shipping for product returns."
+#: lib/filters-messages.php:69
+msgid "The type of return fees."
 msgstr ""
 
-#: lib/filters-messages.php:72
+#: lib/filters-messages.php:75
+msgid "The cost of shipping for returning a product."
+msgstr ""
+
+#: lib/filters-messages.php:81
 msgid "The countries this return policy applies to."
 msgstr ""
 
-#: lib/filters-messages.php:74
+#: lib/filters-messages.php:83
 msgid "You can select up to %d countries."
 msgstr ""
 
-#: lib/filters-options.php:107 lib/mrp.php:52
+#: lib/filters-options.php:116 lib/mrp.php:52
 msgctxt "option value"
 msgid "Return Policy #%d"
 msgstr ""

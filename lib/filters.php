@@ -38,6 +38,10 @@ if ( ! class_exists( 'WpssoMrpFilters' ) ) {
 
 			new WpssoMrpFiltersOptions( $plugin, $addon );
 
+			require_once WPSSOMRP_PLUGINDIR . 'lib/filters-upgrade.php';
+
+			new WpssoMrpFiltersUpgrade( $plugin, $addon );
+
 			if ( is_admin() ) {
 
 				require_once WPSSOMRP_PLUGINDIR . 'lib/filters-edit.php';

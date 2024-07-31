@@ -62,13 +62,13 @@ if ( ! class_exists( 'WpssoMrpFiltersEdit' ) ) {
 						$css_class = '', $css_id = '', $is_assoc = true, $is_disabled = false,
 							$selected = false, $event_names = 'on_change_unhide_rows' ),
 				),
-				'mrp_days' => array(
+				'mrp_return_days' => array(
 					'tr_class' => $form->get_css_class_on_change( $select_id = 'mrp_category',
 						$select_value = 'https://schema.org/MerchantReturnFiniteReturnWindow' ),
 					'th_class' => 'medium',
 					'label'    => _x( 'Return Window Days', 'option label', 'wpsso-merchant-return-policy' ),
-					'tooltip'  => 'meta-mrp_days',
-					'content'  => $form->get_input( 'mrp_days', $css_class = 'xshort' ),
+					'tooltip'  => 'meta-mrp_return_days',
+					'content'  => $form->get_input( 'mrp_return_days', $css_class = 'xshort' ),
 				),
 				'mrp_methods' => array(
 					'tr_class' => $form->get_css_class_on_change( $select_id = 'mrp_category',
@@ -83,12 +83,24 @@ if ( ! class_exists( 'WpssoMrpFiltersEdit' ) ) {
 						$css_class = 'input_vertical_list', $css_id = '', $is_assoc = true, $is_disabled = false,
 							$event_names = 'on_change_unhide_rows' ),
 				),
-				'mrp_shipping_fees' => array(
+				'mrp_return_fees' => array(
 					'tr_class' => $form->get_css_class_on_change( $select_id = 'mrp_method_https_schema_org_ReturnByMail', $select_value = 1 ),
 					'th_class' => 'medium',
-					'label'    => _x( 'Return Shipping Fees', 'option label', 'wpsso-merchant-return-policy' ),
+					'label'    => _x( 'Return Fees', 'option label', 'wpsso-merchant-return-policy' ),
+					'tooltip'  => 'meta-mrp_return_fees',
+					'content'  => $form->get_select( 'mrp_return_fees', $this->p->cf[ 'form' ][ 'return_fees' ],
+						$css_class = '', $css_id = '', $is_assoc = true, $is_disabled = false,
+							$selected = false, $event_names = 'on_change_unhide_rows' ),
+				),
+				'mrp_shipping_fees' => array(
+					'tr_class' => $form->get_css_class_on_change( $select_id = 'mrp_return_fees',
+						$select_values = array(
+							'https://schema.org/ReturnShippingFees',
+						) ),
+					'th_class' => 'medium',
+					'label'    => _x( 'Shipping Fees', 'option label', 'wpsso-merchant-return-policy' ),
 					'tooltip'  => 'meta-mrp_shipping_fees',
-					'content'  => $form->get_amount_currency( 'mrp_shipping_fees', 'mrp_shipping_currency' ),
+					'content'  => $form->get_amount_currency( 'mrp_shipping_amount', 'mrp_shipping_currency' ),
 				),
 				'mrp_countries' => array(
 					'th_class' => 'medium',

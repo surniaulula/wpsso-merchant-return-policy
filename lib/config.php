@@ -17,8 +17,8 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssomrp' => array(			// Plugin acronym.
-					'version'     => '2.1.0',	// Plugin version.
-					'opt_version' => '6',		// Increment when changing default option values.
+					'version'     => '2.2.0-dev.1',	// Plugin version.
+					'opt_version' => '8',		// Increment when changing default option values.
 					'short'       => 'WPSSO MRP',	// Short plugin name.
 					'name'        => 'WPSSO Merchant Return Policy Manager',
 					'desc'        => 'Manage any number of Merchant Return Policies for Google Merchant listings.',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '17.21.0',
+							'min_version'   => '17.22.0-dev.1',
 						),
 					),
 
@@ -68,12 +68,15 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 			 */
 			'opt' => array(
 				'mrp_md_defaults' => array(
-					'mrp_name'                                 => '',
-					'mrp_category'                             => 'https://schema.org/MerchantReturnUnspecified',
-					'mrp_days'                                 => 30,
-					'mrp_method_https_schema_org_ReturnByMail' => 1,
-					'mrp_shipping_fees'                        => 0,
-					'mrp_country_US'                           => 1,
+					'mrp_name'                                 => '',	// Return Policy Name.
+					'mrp_is_schema_def_product_mrp'            => 0,
+					'mrp_category'                             => 'https://schema.org/MerchantReturnUnspecified',	// Return Policy Category.
+					'mrp_return_days'                          => 30,	// Return Window Days.
+					'mrp_method_https_schema_org_ReturnByMail' => 1,	// Return Methods.
+					'mrp_return_fees'                          => 'https://schema.org/ReturnFeesCustomerResponsibility',	// Return Fees.
+					'mrp_shipping_amount'                      => 0,	// Shipping Fees (Amount).
+					'mrp_shipping_currency'                    => 'USD',	// Shipping Fees (Currency).
+					'mrp_country_US'                           => 1,	// Applicable Countries.
 				),
 			),
 			'form' => array(
