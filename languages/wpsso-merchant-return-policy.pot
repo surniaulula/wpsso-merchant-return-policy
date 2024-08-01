@@ -118,7 +118,7 @@ msgstr ""
 msgid "You can select up to %d countries."
 msgstr ""
 
-#: lib/filters-options.php:116 lib/mrp.php:52
+#: lib/filters-options.php:118 lib/mrp.php:52
 msgctxt "option value"
 msgid "Return Policy #%d"
 msgstr ""

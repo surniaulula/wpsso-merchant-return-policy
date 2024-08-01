@@ -69,7 +69,8 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 			'opt' => array(
 				'mrp_md_defaults' => array(
 					'mrp_name'                                 => '',	// Return Policy Name.
-					'mrp_is_schema_def_product_mrp'            => 0,
+					'mrp_desc'                                 => '',
+					'mrp_is_schema_def_product_mrp'            => 0,	// Default Product Return Policy.
 					'mrp_category'                             => 'https://schema.org/MerchantReturnUnspecified',	// Return Policy Category.
 					'mrp_return_days'                          => 30,	// Return Window Days.
 					'mrp_method_https_schema_org_ReturnByMail' => 1,	// Return Methods.

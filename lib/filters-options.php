@@ -109,16 +109,13 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 
 			if ( WPSSOMRP_MRP_POST_TYPE === $mod[ 'post_type' ] ) {
 
+				$md_opts = $this->filter_get_post_options( $md_opts, $post_id, $mod );	// Merge defaults.
+
 				$mrp_id = 'mrp-' . $post_id;
 
 				if ( empty( $md_opts[ 'mrp_name' ] ) ) {	// Just in case.
 
 					$md_opts[ 'mrp_name' ] = sprintf( _x( 'Return Policy #%d', 'option value', 'wpsso-merchant-return-policy' ), $post_id );
-				}
-
-				if ( ! isset( $md_opts[ 'mrp_desc' ] ) ) {	// Just in case.
-
-					$md_opts[ 'mrp_desc' ] = '';
 				}
 
 				/*
@@ -141,6 +138,25 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 					} elseif ( $mrp_id !== $this->p->options[ $opts_key ] ) {	// Maybe change the existing return policy ID.
 
 						$this->p->options[ $opts_key ] = $mrp_id;
+					}
+
+					SucomUtilWP::update_options_key( WPSSO_OPTIONS_NAME, $opts_key, $this->p->options[ $opts_key ] );	// Save changes.
+				}
+
+				if ( empty( $md_opts[ 'mrp_method_https_schema_org_ReturnByMail' ] ) ) {
+
+					$md_defs = $this->filter_get_post_defaults( array(), $post_id, $mod );
+
+					$md_opts[ 'mrp_return_fees' ]       = $md_defs[ 'mrp_return_fees' ];
+					$md_opts[ 'mrp_shipping_amount' ]   = $md_defs[ 'mrp_shipping_amount' ];
+					$md_opts[ 'mrp_shipping_currency' ] = $md_defs[ 'mrp_shipping_currency' ];
+				}
+				
+				if ( 'https://schema.org/ReturnShippingFees' === $md_opts[ 'mrp_return_fees' ] ) {
+					
+					if ( empty( $md_opts[ 'mrp_shipping_amount' ] ) ) {
+
+						$md_opts[ 'mrp_return_fees' ] = 'https://schema.org/FreeReturn';
 					}
 				}
 			}
