@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Merchant Return Policy Manager package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Merchant Return Policy Manager 2.2.1-b.1\n"
+"Project-Id-Version: WPSSO Merchant Return Policy Manager 2.2.1-b.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-merchant-"
 "return-policy\n"
 "POT-Creation-Date: 2024-MO-DA HO:MI+ZONE\n"
@@ -118,7 +118,7 @@ msgstr ""
 msgid "You can select up to %d countries."
 msgstr ""
 
-#: lib/filters-options.php:118 lib/mrp.php:52
+#: lib/filters-options.php:115 lib/mrp.php:52
 msgctxt "option value"
 msgid "Return Policy #%d"
 msgstr ""

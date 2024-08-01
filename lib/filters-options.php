@@ -76,11 +76,6 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 					$md_defs[ 'mrp_is_' . $opts_key ] = 1;
 
 				} else $md_defs[ 'mrp_is_' . $opts_key ] = 0;
-
-				if ( $this->p->debug->enabled ) {
-
-					$this->p->debug->log( 'setting mrp_is_' . $opts_key . ' = ' . $md_defs[ 'mrp_is_' .  $opts_key ] );
-				}
 			}
 
 			return $md_defs;
@@ -109,9 +104,11 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 
 			if ( WPSSOMRP_MRP_POST_TYPE === $mod[ 'post_type' ] ) {
 
-				$md_opts = $this->filter_get_post_options( $md_opts, $post_id, $mod );	// Merge defaults.
-
 				$mrp_id = 'mrp-' . $post_id;
+
+				$md_defs = $this->filter_get_post_defaults( array(), $post_id, $mod );
+
+				$md_opts = array_merge( $md_defs, $md_opts );
 
 				if ( empty( $md_opts[ 'mrp_name' ] ) ) {	// Just in case.
 
@@ -143,6 +140,8 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 						
 						SucomUtilWP::update_options_key( WPSSO_OPTIONS_NAME, $opts_key, $mrp_id );	// Save changes.
 					}
+
+					unset( $md_opts[ 'mrp_is_' . $opts_key ] );
 				}
 
 				if ( empty( $md_opts[ 'mrp_method_https_schema_org_ReturnByMail' ] ) ) {
