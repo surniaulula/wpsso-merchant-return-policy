@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Merchant Return Policy Manager 2.0.0\n"
+"Project-Id-Version: WPSSO Merchant Return Policy Manager 2.2.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-merchant-return-policy\n"
-"POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-11-06 06:59-0800\n"
+"POT-Creation-Date: 2024-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2024-08-01 07:04-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -11,13 +11,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.4.4\n"
 
-#: gettext/gettext-lib-abstract-com.php:5 lib/abstract/com/add-on.php:209
+#: gettext/gettext-lib-abstract-com.php:5 lib/abstract/com/add-on.php:243
 msgid "The %1$s add-on requires the %2$s plugin."
 msgstr "L'ajout %1$s requiert l'extension %2$s."
 
-#: gettext/gettext-lib-abstract-com.php:6 lib/abstract/com/add-on.php:223
+#: gettext/gettext-lib-abstract-com.php:6 lib/abstract/com/add-on.php:262
 msgid "The %1$s add-on requires %2$s version %3$s or newer (version %4$s is currently installed)."
 msgstr "L'ajout %1$s nécessite %2$s version %3$s ou plus récente (la version %4$s est installée actuellement)."
 
@@ -41,69 +41,78 @@ msgctxt "option value"
 msgid "Default Product Return Policy"
 msgstr "Politique retour de produit par défaut"
 
-#: lib/filters-edit.php:48
+#: lib/filters-edit.php:49
 msgctxt "option label"
 msgid "Return Policy Name"
 msgstr "Nom de politique de retour"
 
-#: lib/filters-edit.php:56
+#: lib/filters-edit.php:59
 msgctxt "option label"
 msgid "Return Policy Category"
 msgstr "Catégorie politique de retour"
 
-#: lib/filters-edit.php:65
+#: lib/filters-edit.php:69
 msgctxt "option label"
 msgid "Return Window Days"
 msgstr "Jours fenêtre de retour"
 
-#: lib/filters-edit.php:75
+#: lib/filters-edit.php:80
 msgctxt "option label"
 msgid "Return Methods"
 msgstr "Méthodes de retour"
 
-#: lib/filters-edit.php:83
+#: lib/filters-edit.php:89
 msgctxt "option label"
-msgid "Return Shipping Fees"
+msgid "Return Fees"
 msgstr "Frais de retour"
 
-#: lib/filters-edit.php:88
+#: lib/filters-edit.php:101
+msgctxt "option label"
+msgid "Shipping Fees"
+msgstr "Frais d'expédition"
+
+#: lib/filters-edit.php:107
 msgctxt "option label"
 msgid "Applicable Countries"
 msgstr "Pays concernés"
 
-#: lib/filters-messages.php:39
+#: lib/filters-messages.php:42
 msgid "A name for this return policy (required)."
 msgstr "Un nom pour cette politique de retour (obligatoire)."
 
-#: lib/filters-messages.php:41
+#: lib/filters-messages.php:44
 msgid "The return policy name may appear in WordPress editing pages and in the Schema MerchantReturnPolicy \"name\" property."
 msgstr "Le nom de la politique de retour peut apparaître dans les pages d'édition WordPress et dans la propriété de Schéma MerchantReturnPolicy \"name\"."
 
-#: lib/filters-messages.php:48
+#: lib/filters-messages.php:51
 msgid "The type of return policy."
 msgstr "Le type de politique de retour."
 
-#: lib/filters-messages.php:54
-msgid "The number of days (from the delivery date) that a product can be returned."
-msgstr "Le nombre de jours (à compter de la date de livraison) pendant lesquels un produit peut être retourné."
+#: lib/filters-messages.php:57
+msgid "The number of days from the delivery date that a product can be returned."
+msgstr "Le nombre de jours à compter de la date de livraison pendant lesquels un produit peut être retourné."
 
-#: lib/filters-messages.php:60
-msgid "The return methods offered."
-msgstr "Les méthodes de retour proposés."
+#: lib/filters-messages.php:63
+msgid "The type of return methods offered."
+msgstr "Le type de méthodes de retour proposées."
 
-#: lib/filters-messages.php:66
-msgid "The cost of shipping for product returns."
-msgstr "Les frais d'expédition pour les retours de produits."
+#: lib/filters-messages.php:69
+msgid "The type of return fees."
+msgstr "Le type de frais de retour."
 
-#: lib/filters-messages.php:72
+#: lib/filters-messages.php:75
+msgid "The cost of shipping for returning a product."
+msgstr "Les frais d'expédition pour le retour d'un produit."
+
+#: lib/filters-messages.php:81
 msgid "The countries this return policy applies to."
 msgstr "Les pays auxquels cette politique de retour s'applique."
 
-#: lib/filters-messages.php:74
+#: lib/filters-messages.php:83
 msgid "You can select up to %d countries."
 msgstr "Vous pouvez sélectionner jusqu'à %d pays."
 
-#: lib/filters-options.php:87 lib/mrp.php:52
+#: lib/filters-options.php:115 lib/mrp.php:52
 msgctxt "option value"
 msgid "Return Policy #%d"
 msgstr "Politique de retour #%d"
