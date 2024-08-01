@@ -133,14 +133,16 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 						if ( $mrp_id === $this->p->options[ $opts_key ] ) {	// Maybe remove the existing return policy ID.
 
 							$this->p->options[ $opts_key ] = 'none';
+							
+							SucomUtilWP::update_options_key( WPSSO_OPTIONS_NAME, $opts_key, 'none' );	// Save changes.
 						}
 
 					} elseif ( $mrp_id !== $this->p->options[ $opts_key ] ) {	// Maybe change the existing return policy ID.
 
 						$this->p->options[ $opts_key ] = $mrp_id;
+						
+						SucomUtilWP::update_options_key( WPSSO_OPTIONS_NAME, $opts_key, $mrp_id );	// Save changes.
 					}
-
-					SucomUtilWP::update_options_key( WPSSO_OPTIONS_NAME, $opts_key, $this->p->options[ $opts_key ] );	// Save changes.
 				}
 
 				if ( empty( $md_opts[ 'mrp_method_https_schema_org_ReturnByMail' ] ) ) {
