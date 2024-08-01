@@ -82,7 +82,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.2.1-dev.1 (2024/07/31)**
+**Version 2.2.1-b.1 (2024/07/31)**
 
 * **New Features**
 	* None.
@@ -95,7 +95,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.8.
-	* WPSSO Core v17.22.0-dev.1.
+	* WPSSO Core v17.22.0-b.1.
 
 **Version 2.1.0 (2024/07/31)**
 
@@ -129,7 +129,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.2.1-dev.1 =
+= 2.2.1-b.1 =
 
 (2024/07/31) Added a new "Return Fees" option. Fixed saving Return Policy as default.
 
