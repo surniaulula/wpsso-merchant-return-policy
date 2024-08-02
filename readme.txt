@@ -82,6 +82,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.3.0-dev.4 (2024/08/02)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v7.2.34.
+	* WordPress v5.8.
+	* WPSSO Core v17.23.0-dev.4.
+
 **Version 2.2.1 (2024/08/01)**
 
 * **New Features**
@@ -128,6 +143,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v17.18.0.
 
 == Upgrade Notice ==
+
+= 2.3.0-dev.4 =
+
+(2024/08/02) None.
 
 = 2.2.1 =
 
