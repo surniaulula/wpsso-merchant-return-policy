@@ -82,12 +82,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.0-dev.4 (2024/08/02)**
+**Version 2.3.0-dev.4 (TBD)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Added a reminder on the Return Policy editing page that Google limits the number of countries to 50.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -146,7 +146,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.3.0-dev.4 =
 
-(2024/08/02) None.
+(TBD) Added a reminder on the Return Policy editing page that Google limits the number of countries to 50.
 
 = 2.2.1 =
 
