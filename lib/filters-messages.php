@@ -26,11 +26,14 @@ if ( ! class_exists( 'WpssoMrpFiltersMessages' ) ) {
 			$this->a =& $addon;
 
 			$this->p->util->add_plugin_filters( $this, array(
-				'messages_tooltip_meta_mrp' => 3,
+				'messages_tooltip_meta' => 3,
+				'messages_info_meta'    => 3,
 			) );
 		}
 
-		public function filter_messages_tooltip_meta_mrp( $text, $msg_key, $info ) {
+		public function filter_messages_tooltip_meta( $text, $msg_key, $info ) {
+
+			if ( 0 !== strpos( $msg_key, 'tooltip-meta-mrp_' ) ) return $text;
 
 			/*
 			 * See https://developers.google.com/search/docs/appearance/structured-data/merchant-listing#returns.
@@ -43,6 +46,12 @@ if ( ! class_exists( 'WpssoMrpFiltersMessages' ) ) {
 
 					$text .= __( 'The return policy name may appear in WordPress editing pages and in the Schema MerchantReturnPolicy "name" property.',
 						'wpsso-merchant-return-policy' );
+
+					break;
+
+				case 'tooltip-meta-mrp_is_default':	// Return Policy Is Default.
+
+					$text = __( 'You may choose this return policy as the default for your content.', 'wpsso' ) . ' ';
 
 					break;
 
@@ -80,7 +89,33 @@ if ( ! class_exists( 'WpssoMrpFiltersMessages' ) ) {
 
 					$text = __( 'The countries this return policy applies to.', 'wpsso-merchant-return-policy' ) . ' ';
 
-					$text .= sprintf( __( 'You can select up to %d countries.', 'wpsso-merchant-return-policy' ), WPSSOMRP_MRP_COUNTRIES_MAX ) . ' ';
+					$text .= sprintf( __( 'Note that Google limits the selection to a maximum of %d countries.',
+						'wpsso-merchant-return-policy' ), WPSSOMRP_MRP_COUNTRIES_MAX ) . ' ';
+
+					break;
+			}
+
+			return $text;
+		}
+
+		public function filter_messages_info_meta( $text, $msg_key, $info ) {
+
+			if ( 0 !== strpos( $msg_key, 'info-meta-mrp-' ) ) return $text;
+
+			switch ( $msg_key ) {
+
+				/*
+				 * SSO Returns > Edit Return Policy page.
+				 */
+				case 'info-meta-mrp-countries':
+				
+					$text = '<p class="status-msg">';
+					
+					$text .= sprintf( __( 'Note that Google limits this selection to a maximum of %d countries.',
+						'wpsso-merchant-return-policy' ), WPSSOMRP_MRP_COUNTRIES_MAX ) . ' ';
+
+					
+					$text .= '</p>';
 
 					break;
 			}

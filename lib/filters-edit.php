@@ -38,11 +38,13 @@ if ( ! class_exists( 'WpssoMrpFiltersEdit' ) ) {
 			return is_array( $mixed ) ? $mixed + $mrp_names : $mrp_names;
 		}
 
+		/*
+		 * See https://developers.google.com/search/docs/appearance/structured-data/product#merchant-listings_merchant-return-policy.
+		 */
 		public function filter_mb_mrp_rows( $table_rows, $form, $head_info, $mod ) {
 
-			/*
-			 * See https://developers.google.com/search/docs/appearance/structured-data/product#merchant-listings_merchant-return-policy.
-			 */
+			$countries_msg = $this->p->msgs->get( 'info-meta-mrp-countries' );
+
 			$form_rows = array(
 				'mrp_name' => array(
 					'th_class' => 'medium',
@@ -52,7 +54,14 @@ if ( ! class_exists( 'WpssoMrpFiltersEdit' ) ) {
 				),
 				'mrp_defaults' => array(
 					'th_class' => 'medium',
+					'label'    => _x( 'Return Policy Is Default', 'option label', 'wpsso-merchant-return-policy' ),
+					'tooltip'  => 'meta-mrp_is_default',
 					'content'  => $form->get_checklist( 'mrp_is', $this->p->cf[ 'form' ][ 'mrp_is_defaults' ] ),
+				),
+				'subsection_mrp' => array(
+					'td_class' => 'subsection',
+					'header'   => 'h5',
+					'label'    => _x( 'Return Policy Information', 'metabox title', 'wpsso-merchant-return-policy' ),
 				),
 				'mrp_category' => array(
 					'th_class' => 'medium',
@@ -106,7 +115,8 @@ if ( ! class_exists( 'WpssoMrpFiltersEdit' ) ) {
 					'th_class' => 'medium',
 					'label'   => _x( 'Applicable Countries', 'option label', 'wpsso-merchant-return-policy' ),
 					'tooltip' => 'meta-mrp_countries',
-					'content' => $form->get_checklist_countries( 'mrp_country', $css_class = 'input_vertical_list input_cols_2' ),
+					'content' => $countries_msg .
+						$form->get_checklist_countries( 'mrp_country', $css_class = 'input_vertical_list input_cols_2' ),
 				),
 			);
 
