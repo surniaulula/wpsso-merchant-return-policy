@@ -82,7 +82,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.0-dev.4 (TBD)**
+**Version 2.3.0-dev.5 (2024/08/03)**
 
 * **New Features**
 	* None.
@@ -95,7 +95,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.8.
-	* WPSSO Core v17.23.0-dev.4.
+	* WPSSO Core v17.23.0-dev.5.
 
 **Version 2.2.1 (2024/08/01)**
 
@@ -144,9 +144,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.3.0-dev.4 =
+= 2.3.0-dev.5 =
 
-(TBD) Added a reminder on the Return Policy editing page that Google limits the number of countries to 50.
+(2024/08/03) Added a reminder on the Return Policy editing page that Google limits the number of countries to 50.
 
 = 2.2.1 =
 
