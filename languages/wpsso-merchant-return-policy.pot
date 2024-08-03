@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Merchant Return Policy Manager package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Merchant Return Policy Manager 2.3.0-dev.5\n"
+"Project-Id-Version: WPSSO Merchant Return Policy Manager 2.3.0-b.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-merchant-"
 "return-policy\n"
 "POT-Creation-Date: 2024-MO-DA HO:MI+ZONE\n"
@@ -100,7 +100,7 @@ msgid ""
 msgstr ""
 
 #: lib/filters-messages.php:54
-msgid "You may choose this return policy as the default for your content."
+msgid "You may choose this return policy as the default."
 msgstr ""
 
 #: lib/filters-messages.php:60

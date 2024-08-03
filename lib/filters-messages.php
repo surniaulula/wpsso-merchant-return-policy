@@ -51,7 +51,7 @@ if ( ! class_exists( 'WpssoMrpFiltersMessages' ) ) {
 
 				case 'tooltip-meta-mrp_is_default':	// Return Policy Is Default.
 
-					$text = __( 'You may choose this return policy as the default for your content.', 'wpsso' ) . ' ';
+					$text = __( 'You may choose this return policy as the default.', 'wpsso' ) . ' ';
 
 					break;
 
