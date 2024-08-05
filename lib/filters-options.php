@@ -130,14 +130,14 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 						if ( $mrp_id === $this->p->options[ $opts_key ] ) {	// Maybe remove the existing return policy ID.
 
 							$this->p->options[ $opts_key ] = 'none';
-							
+
 							SucomUtilWP::update_options_key( WPSSO_OPTIONS_NAME, $opts_key, 'none' );	// Save changes.
 						}
 
 					} elseif ( $mrp_id !== $this->p->options[ $opts_key ] ) {	// Maybe change the existing return policy ID.
 
 						$this->p->options[ $opts_key ] = $mrp_id;
-						
+
 						SucomUtilWP::update_options_key( WPSSO_OPTIONS_NAME, $opts_key, $mrp_id );	// Save changes.
 					}
 
@@ -152,9 +152,9 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 					$md_opts[ 'mrp_shipping_amount' ]   = $md_defs[ 'mrp_shipping_amount' ];
 					$md_opts[ 'mrp_shipping_currency' ] = $md_defs[ 'mrp_shipping_currency' ];
 				}
-				
+
 				if ( 'https://schema.org/ReturnShippingFees' === $md_opts[ 'mrp_return_fees' ] ) {
-					
+
 					if ( empty( $md_opts[ 'mrp_shipping_amount' ] ) ) {
 
 						$md_opts[ 'mrp_return_fees' ] = 'https://schema.org/FreeReturn';

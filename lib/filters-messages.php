@@ -108,13 +108,13 @@ if ( ! class_exists( 'WpssoMrpFiltersMessages' ) ) {
 				 * SSO Returns > Edit Return Policy page.
 				 */
 				case 'info-meta-mrp-countries':
-				
+
 					$text = '<p class="status-msg">';
-					
+
 					$text .= sprintf( __( 'Note that Google limits this selection to a maximum of %d countries.',
 						'wpsso-merchant-return-policy' ), WPSSOMRP_MRP_COUNTRIES_MAX ) . ' ';
 
-					
+
 					$text .= '</p>';
 
 					break;
