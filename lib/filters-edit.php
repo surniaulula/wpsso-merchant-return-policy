@@ -89,7 +89,7 @@ if ( ! class_exists( 'WpssoMrpFiltersEdit' ) ) {
 					'label'    => _x( 'Return Methods', 'option label', 'wpsso-merchant-return-policy' ),
 					'tooltip'  => 'meta-mrp_methods',
 					'content' => $form->get_checklist( 'mrp_method', $this->p->cf[ 'form' ][ 'return_method' ],
-						$css_class = 'input_vertical_list', $css_id = '', $is_assoc = true, $is_disabled = false,
+						$css_class = 'column-list', $css_id = '', $is_assoc = true, $is_disabled = false,
 							$event_names = 'on_change_unhide_rows' ),
 				),
 				'mrp_return_fees' => array(
@@ -115,8 +115,7 @@ if ( ! class_exists( 'WpssoMrpFiltersEdit' ) ) {
 					'th_class' => 'medium',
 					'label'   => _x( 'Applicable Countries', 'option label', 'wpsso-merchant-return-policy' ),
 					'tooltip' => 'meta-mrp_countries',
-					'content' => $countries_msg .
-						$form->get_checklist_countries( 'mrp_country', $css_class = 'input_vertical_list input_cols_2' ),
+					'content' => $countries_msg . $form->get_checklist_countries( 'mrp_country', $css_class = 'column-list num-cols-2' ),
 				),
 			);
 
