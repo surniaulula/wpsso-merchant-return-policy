@@ -82,7 +82,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.4.0-dev.6 (2024/08/14)**
+**Version 2.4.0-b.1 (2024/08/15)**
 
 * **New Features**
 	* None.
@@ -95,7 +95,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.8.
-	* WPSSO Core v18.0.0-dev.6.
+	* WPSSO Core v18.0.0-b.1.
 
 **Version 2.3.0 (2024/08/03)**
 
@@ -159,9 +159,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.4.0-dev.6 =
+= 2.4.0-b.1 =
 
-(2024/08/14) Renamed 'input_vertical_list' CSS class to 'column-list'.
+(2024/08/15) Renamed 'input_vertical_list' CSS class to 'column-list'.
 
 = 2.3.0 =
 
