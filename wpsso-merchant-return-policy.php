@@ -15,7 +15,7 @@
  * Requires PHP: 7.2.34
  * Requires At Least: 5.8
  * Tested Up To: 6.6.1
- * Version: 2.4.0
+ * Version: 2.5.0-dev.1
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -41,10 +41,7 @@ if ( ! class_exists( 'WpssoMrp' ) ) {
 
 	class WpssoMrp extends WpssoAbstractAddOn {
 
-		public $filters;	// WpssoMrpFilters class object.
-		public $post;		// WpssoMrpPost class object.
-
-		protected $p;		// Wpsso class object.
+		protected $p;	// Wpsso class object.
 
 		private static $instance = null;	// WpssoMrp class object.
 
@@ -70,12 +67,8 @@ if ( ! class_exists( 'WpssoMrp' ) ) {
 
 		/*
 		 * Called by Wpsso->set_objects() which runs at init priority 10.
-		 *
-		 * Require library files with functions or static methods in require_libs().
-		 *
-		 * Require library files with dynamic methods and instantiate the class object in init_objects().
 		 */
-		public function init_objects() {
+		public function init_objects_preloader() {
 
 			$this->p =& Wpsso::get_instance();
 
@@ -89,13 +82,8 @@ if ( ! class_exists( 'WpssoMrp' ) ) {
 				return;	// Stop here.
 			}
 
-			require_once WPSSOMRP_PLUGINDIR . 'lib/filters.php';
-
-			$this->filters = new WpssoMrpFilters( $this->p, $this );
-
-			require_once WPSSOMRP_PLUGINDIR . 'lib/post.php';
-
-			$this->post = new WpssoMrpPost( $this->p, $this );	// Depends on WpssoPost and WpssoAbstractWpMeta.
+			new WpssoMrpFilters( $this->p, $this );
+			new WpssoMrpPost( $this->p, $this );
 		}
 	}
 
