@@ -15,7 +15,7 @@
  * Requires PHP: 7.2.34
  * Requires At Least: 5.8
  * Tested Up To: 6.6.1
- * Version: 2.5.0
+ * Version: 2.6.0-dev.1
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -83,7 +83,10 @@ if ( ! class_exists( 'WpssoMrp' ) ) {
 			}
 
 			new WpssoMrpFilters( $this->p, $this );
-			new WpssoMrpPost( $this->p, $this );
+
+			$classname = apply_filters( 'wpssomrp_load_lib', false, 'post' );
+
+			if ( is_string( $classname ) && class_exists( $classname ) ) new $classname( $this->p, $this );
 		}
 	}
 

@@ -10,14 +10,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
-if ( ! class_exists( 'WpssoPost' ) ) {
-
-	if ( defined( 'WPSSO_PLUGINDIR' ) ) {
-
-		require_once WPSSO_PLUGINDIR . 'lib/post.php';
-	}
-}
-
 if ( ! class_exists( 'WpssoMrpPost' ) && class_exists( 'WpssoPost' ) ) {
 
 	class WpssoMrpPost extends WpssoPost {
@@ -35,6 +27,9 @@ if ( ! class_exists( 'WpssoMrpPost' ) && class_exists( 'WpssoPost' ) ) {
 				$this->p->debug->mark();
 			}
 
+			/*
+			 * Do not add the Document SSO metabox to the 'return_policy' post type.
+			 */
 			$this->p->options[ 'plugin_add_to_' . WPSSOMRP_MRP_POST_TYPE ]               = 0;
 			$this->p->options[ 'plugin_add_to_' . WPSSOMRP_MRP_POST_TYPE . ':disabled' ] = true;
 

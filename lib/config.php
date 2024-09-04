@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssomrp' => array(			// Plugin acronym.
-					'version'     => '2.5.0',	// Plugin version.
+					'version'     => '2.6.0-dev.1',	// Plugin version.
 					'opt_version' => '8',		// Increment when changing default option values.
 					'short'       => 'WPSSO MRP',	// Short plugin name.
 					'name'        => 'WPSSO Merchant Return Policy Manager',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '18.5.0',
+							'min_version'   => '18.6.0',
 						),
 					),
 
@@ -187,7 +187,6 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 
 			require_once WPSSOMRP_PLUGINDIR . 'lib/filters.php';
 			require_once WPSSOMRP_PLUGINDIR . 'lib/mrp.php';
-			require_once WPSSOMRP_PLUGINDIR . 'lib/post.php';
 			require_once WPSSOMRP_PLUGINDIR . 'lib/register.php';
 
 			add_filter( 'wpssomrp_load_lib', array( __CLASS__, 'load_lib' ), 10, 3 );
