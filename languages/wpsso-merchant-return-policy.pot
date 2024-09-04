@@ -141,6 +141,11 @@ msgctxt "option value"
 msgid "Return Policy #%d"
 msgstr ""
 
+#: lib/integ/admin/post.php:75
+msgctxt "metabox title"
+msgid "Return Policy"
+msgstr ""
+
 #: lib/mrp.php:91 lib/mrp.php:102
 msgid "Unable to provide information for return policy ID #%s."
 msgstr ""
@@ -156,11 +161,6 @@ msgstr ""
 
 #: lib/mrp.php:106
 msgid "Please select a different return policy."
-msgstr ""
-
-#: lib/post.php:78
-msgctxt "metabox title"
-msgid "Return Policy"
 msgstr ""
 
 #: lib/register.php:148

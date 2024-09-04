@@ -83,10 +83,6 @@ if ( ! class_exists( 'WpssoMrp' ) ) {
 			}
 
 			new WpssoMrpFilters( $this->p, $this );
-
-			$classname = apply_filters( 'wpssomrp_load_lib', false, 'post' );
-
-			if ( is_string( $classname ) && class_exists( $classname ) ) new $classname( $this->p, $this );
 		}
 	}
 
