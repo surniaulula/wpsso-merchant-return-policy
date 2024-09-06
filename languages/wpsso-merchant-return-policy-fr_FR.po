@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Merchant Return Policy Manager 2.4.0\n"
+"Project-Id-Version: WPSSO Merchant Return Policy Manager 2.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-merchant-return-policy\n"
 "POT-Creation-Date: 2024-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-08-15 07:25-0700\n"
+"PO-Revision-Date: 2024-09-05 15:45-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -13,11 +13,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: gettext/gettext-lib-abstract-com.php:5 lib/abstract/com/add-on.php:243
+#: gettext/gettext-lib-abstract-com.php:5 lib/abstract/com/add-on.php:235
 msgid "The %1$s add-on requires the %2$s plugin."
 msgstr "L'ajout %1$s requiert l'extension %2$s."
 
-#: gettext/gettext-lib-abstract-com.php:6 lib/abstract/com/add-on.php:262
+#: gettext/gettext-lib-abstract-com.php:6 lib/abstract/com/add-on.php:254
 msgid "The %1$s add-on requires %2$s version %3$s or newer (version %4$s is currently installed)."
 msgstr "L'ajout %1$s nécessite %2$s version %3$s ou plus récente (la version %4$s est installée actuellement)."
 
@@ -135,6 +135,11 @@ msgctxt "option value"
 msgid "Return Policy #%d"
 msgstr "Politique de retour #%d"
 
+#: lib/integ/admin/post.php:77
+msgctxt "metabox title"
+msgid "Return Policy"
+msgstr "Politique de retour"
+
 #: lib/mrp.php:91 lib/mrp.php:102
 msgid "Unable to provide information for return policy ID #%s."
 msgstr "Impossible de fournir des informations pour la politique de retour ID #%s."
@@ -150,11 +155,6 @@ msgstr "La politique de retour ID #%s n'existe pas."
 #: lib/mrp.php:106
 msgid "Please select a different return policy."
 msgstr "Veuillez sélectionner une autre politique de retour."
-
-#: lib/post.php:83
-msgctxt "metabox title"
-msgid "Return Policy"
-msgstr "Politique de retour"
 
 #: lib/register.php:148
 msgctxt "post type general name"
