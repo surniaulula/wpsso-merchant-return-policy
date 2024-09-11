@@ -82,6 +82,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.6.1-dev.1 (2024/09/11)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* Fixed deprecated creation of dynamic property in `WpssoMrpFilters`.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v7.2.34.
+	* WordPress v5.8.
+	* WPSSO Core v18.7.3-dev.1.
+
 **Version 2.6.0 (2024/09/07)**
 
 * **New Features**
@@ -188,6 +203,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v17.18.0.
 
 == Upgrade Notice ==
+
+= 2.6.1-dev.1 =
+
+(2024/09/11) Fixed deprecated creation of dynamic property in `WpssoMrpFilters`.
 
 = 2.6.0 =
 
