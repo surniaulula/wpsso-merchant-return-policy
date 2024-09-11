@@ -47,8 +47,7 @@ if ( ! class_exists( 'WpssoMrpFilters' ) ) {
 
 				require_once WPSSOMRP_PLUGINDIR . 'lib/filters-messages.php';
 
-				$this->msgs = new WpssoMrpFiltersMessages( $plugin, $addon );
-
+				new WpssoMrpFiltersMessages( $plugin, $addon );
 			}
 		}
 	}
