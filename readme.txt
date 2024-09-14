@@ -9,8 +9,8 @@ Assets URI: https://surniaulula.github.io/wpsso-merchant-return-policy/assets/
 Tags: schema, return policy, merchant, woocommerce, hasMerchantReturnPolicy
 Contributors: jsmoriss
 Requires Plugins: wpsso
-Requires PHP: 7.2.34
-Requires At Least: 5.8
+Requires PHP: 7.4.33
+Requires At Least: 5.9
 Tested Up To: 6.6.2
 Stable Tag: 2.6.1
 
@@ -93,8 +93,8 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* None.
 * **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.8.
+	* PHP v7.4.33.
+	* WordPress v5.9.
 	* WPSSO Core v18.7.3.
 
 **Version 2.6.0 (2024/09/07)**
@@ -127,81 +127,6 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v5.8.
 	* WPSSO Core v18.5.0.
 
-**Version 2.4.0 (2024/08/15)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Renamed 'input_vertical_list' CSS class to 'column-list'.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.8.
-	* WPSSO Core v18.0.0.
-
-**Version 2.3.0 (2024/08/03)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added a reminder on the Return Policy editing page that Google limits the number of countries to 50.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.8.
-	* WPSSO Core v17.23.0.
-
-**Version 2.2.1 (2024/08/01)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added a new "Return Fees" option.
-* **Bugfixes**
-	* Fixed saving Return Policy as default.
-* **Developer Notes**
-	* None.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.8.
-	* WPSSO Core v17.22.0.
-
-**Version 2.1.0 (2024/07/31)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Added debug "mark" messages to the `WpssoMrpFiltersOptions` class methods.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.8.
-	* WPSSO Core v17.21.0.
-
-**Version 2.0.1 (2023/11/20)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* Fixed class not found error in lib/filters-options.php.
-* **Developer Notes**
-	* None.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.8.
-	* WPSSO Core v17.18.0.
-
 == Upgrade Notice ==
 
 = 2.6.1 =
@@ -215,24 +140,4 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 = 2.5.0 =
 
 (2024/08/25) Changed the main instantiation action hook from 'init_objects' to 'init_objects_preloader'.
-
-= 2.4.0 =
-
-(2024/08/15) Renamed 'input_vertical_list' CSS class to 'column-list'.
-
-= 2.3.0 =
-
-(2024/08/03) Added a reminder on the Return Policy editing page that Google limits the number of countries to 50.
-
-= 2.2.1 =
-
-(2024/08/01) Added a new "Return Fees" option. Fixed saving Return Policy as default.
-
-= 2.1.0 =
-
-(2024/07/31) Added debug "mark" messages to the `WpssoMrpFiltersOptions` class methods.
-
-= 2.0.1 =
-
-(2023/11/20) Fixed class not found error in lib/filters-options.php.
 
