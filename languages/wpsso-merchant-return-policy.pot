@@ -163,219 +163,219 @@ msgstr ""
 msgid "Please select a different return policy."
 msgstr ""
 
-#: lib/register.php:148
+#: lib/register.php:145
 msgctxt "post type general name"
 msgid "Return Policies"
 msgstr ""
 
-#: lib/register.php:149
+#: lib/register.php:146
 msgctxt "post type singular name"
 msgid "Return Policy"
 msgstr ""
 
-#: lib/register.php:150 lib/register.php:151
+#: lib/register.php:147 lib/register.php:148
 msgid "Add Return Policy"
 msgstr ""
 
-#: lib/register.php:152
+#: lib/register.php:149
 msgid "Edit Return Policy"
 msgstr ""
 
-#: lib/register.php:153
+#: lib/register.php:150
 msgid "New Return Policy"
 msgstr ""
 
-#: lib/register.php:154
+#: lib/register.php:151
 msgid "View Return Policy"
 msgstr ""
 
-#: lib/register.php:155
+#: lib/register.php:152
 msgid "View Return Policies"
 msgstr ""
 
-#: lib/register.php:156
+#: lib/register.php:153
 msgid "Search Return Policies"
 msgstr ""
 
-#: lib/register.php:157
+#: lib/register.php:154
 msgid "No return policies found"
 msgstr ""
 
-#: lib/register.php:158
+#: lib/register.php:155
 msgid "No return policies found in Trash"
 msgstr ""
 
-#: lib/register.php:159
+#: lib/register.php:156
 msgid "Parent Return Policy:"
 msgstr ""
 
-#: lib/register.php:160
+#: lib/register.php:157
 msgid "All Return Policies"
 msgstr ""
 
-#: lib/register.php:161
+#: lib/register.php:158
 msgid "Return Policy Archives"
 msgstr ""
 
-#: lib/register.php:162
+#: lib/register.php:159
 msgid "Return Policy Attributes"
 msgstr ""
 
-#: lib/register.php:163
+#: lib/register.php:160
 msgid "Insert into return policy"
 msgstr ""
 
-#: lib/register.php:164
+#: lib/register.php:161
 msgid "Uploaded to this return policy"
 msgstr ""
 
-#: lib/register.php:165
+#: lib/register.php:162
 msgid "Return Policy Image"
 msgstr ""
 
-#: lib/register.php:166
+#: lib/register.php:163
 msgid "Set return policy image"
 msgstr ""
 
-#: lib/register.php:167
+#: lib/register.php:164
 msgid "Remove return policy image"
 msgstr ""
 
-#: lib/register.php:168
+#: lib/register.php:165
 msgid "Use as return policy image"
 msgstr ""
 
-#: lib/register.php:169
+#: lib/register.php:166
 msgctxt "admin menu name"
 msgid "SSO Returns"
 msgstr ""
 
-#: lib/register.php:170
+#: lib/register.php:167
 msgid "Filter return policies"
 msgstr ""
 
-#: lib/register.php:171
+#: lib/register.php:168
 msgid "Return Policies list navigation"
 msgstr ""
 
-#: lib/register.php:172
+#: lib/register.php:169
 msgid "Return Policies list"
 msgstr ""
 
-#: lib/register.php:173
+#: lib/register.php:170
 msgctxt "admin bar name"
 msgid "Return Policy"
 msgstr ""
 
-#: lib/register.php:174
+#: lib/register.php:171
 msgid "Return Policy published."
 msgstr ""
 
-#: lib/register.php:175
+#: lib/register.php:172
 msgid "Return Policy published privately."
 msgstr ""
 
-#: lib/register.php:176
+#: lib/register.php:173
 msgid "Return Policy reverted to draft."
 msgstr ""
 
-#: lib/register.php:177
+#: lib/register.php:174
 msgid "Return Policy scheduled."
 msgstr ""
 
-#: lib/register.php:178
+#: lib/register.php:175
 msgid "Return Policy updated."
 msgstr ""
 
-#: lib/register.php:193
+#: lib/register.php:190
 msgctxt "post type label"
 msgid "Return Policy"
 msgstr ""
 
-#: lib/register.php:195
+#: lib/register.php:192
 msgctxt "post type description"
 msgid "Return Policy"
 msgstr ""
 
-#: lib/register.php:229
+#: lib/register.php:226
 msgid "Categories"
 msgstr ""
 
-#: lib/register.php:230
+#: lib/register.php:227
 msgid "Category"
 msgstr ""
 
-#: lib/register.php:231
+#: lib/register.php:228
 msgctxt "admin menu name"
 msgid "Categories"
 msgstr ""
 
-#: lib/register.php:232
+#: lib/register.php:229
 msgid "All Categories"
 msgstr ""
 
-#: lib/register.php:233
+#: lib/register.php:230
 msgid "Edit Category"
 msgstr ""
 
-#: lib/register.php:234
+#: lib/register.php:231
 msgid "View Category"
 msgstr ""
 
-#: lib/register.php:235
+#: lib/register.php:232
 msgid "Update Category"
 msgstr ""
 
-#: lib/register.php:236
+#: lib/register.php:233
 msgid "Add New Category"
 msgstr ""
 
-#: lib/register.php:237
+#: lib/register.php:234
 msgid "New Category Name"
 msgstr ""
 
-#: lib/register.php:238
+#: lib/register.php:235
 msgid "Parent Category"
 msgstr ""
 
-#: lib/register.php:239
+#: lib/register.php:236
 msgid "Parent Category:"
 msgstr ""
 
-#: lib/register.php:240
+#: lib/register.php:237
 msgid "Search Categories"
 msgstr ""
 
-#: lib/register.php:241
+#: lib/register.php:238
 msgid "Popular Categories"
 msgstr ""
 
-#: lib/register.php:242
+#: lib/register.php:239
 msgid "Separate categories with commas"
 msgstr ""
 
-#: lib/register.php:243
+#: lib/register.php:240
 msgid "Add or remove categories"
 msgstr ""
 
-#: lib/register.php:244
+#: lib/register.php:241
 msgid "Choose from the most used"
 msgstr ""
 
-#: lib/register.php:245
+#: lib/register.php:242
 msgid "No categories found."
 msgstr ""
 
-#: lib/register.php:246
+#: lib/register.php:243
 msgid "← Back to categories"
 msgstr ""
 
-#: lib/register.php:250
+#: lib/register.php:247
 msgctxt "taxonomy label"
 msgid "Categories"
 msgstr ""
 
-#: lib/register.php:261
+#: lib/register.php:258
 msgctxt "taxonomy description"
 msgid "Categories for Return Policies"
 msgstr ""
