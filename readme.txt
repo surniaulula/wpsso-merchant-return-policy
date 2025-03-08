@@ -82,6 +82,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.6.2-dev.1 (2025/03/08)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Updated admin menu priority.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v7.4.33.
+	* WordPress v5.9.
+	* WPSSO Core v18.19.5.
+
 **Version 2.6.1 (2024/09/12)**
 
 * **New Features**
@@ -128,6 +143,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v18.5.0.
 
 == Upgrade Notice ==
+
+= 2.6.2-dev.1 =
+
+(2025/03/08) Updated admin menu priority.
 
 = 2.6.1 =
 
