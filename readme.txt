@@ -82,7 +82,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.6.2-dev.2 (2025/03/08)**
+**Version 2.6.2-rc.1 (2025/03/08)**
 
 * **New Features**
 	* None.
@@ -144,7 +144,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.6.2-dev.2 =
+= 2.6.2-rc.1 =
 
 (2025/03/08) Updated admin menu priority.
 
