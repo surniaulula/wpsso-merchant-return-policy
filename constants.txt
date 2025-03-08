@@ -1,0 +1,18 @@
+
+/*
+ * Hard-coded / fixed constants. These values cannot be modified.
+ */
+WPSSOMRP_FILEPATH
+WPSSOMRP_PLUGINBASE
+WPSSOMRP_PLUGINDIR
+WPSSOMRP_PLUGINSLUG
+WPSSOMRP_URLPATH
+WPSSOMRP_VERSION
+WPSSOMRP_MRP_POST_TYPE
+
+/*
+ * Define in your wp-config.php file to change the default value.
+ */
+WPSSOMRP_MRP_MENU_ORDER        = 20
+WPSSOMRP_MRP_CATEGORY_TAXONOMY = false
+WPSSOMRP_MRP_COUNTRIES_MAX     = 50
