@@ -14,13 +14,13 @@ Requires At Least: 5.9
 Tested Up To: 6.8.1
 Stable Tag: 2.6.2
 
-Manage any number of Merchant Return Policies for Google Merchant listings.
+Manage Merchant Return Policies for Google Merchant listings and Schema markup.
 
 == Description ==
 
 <!-- about -->
 
-**Manage any number of Merchant Return Policies for Google Merchant listings.**
+**Manage Merchant Return Policies for Google Merchant listings and Schema markup.**
 
 **Fixes the *Missing field "hasMerchantReturnPolicy" (in "offers")* warning for Google Merchant listings.**
 
