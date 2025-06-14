@@ -21,7 +21,7 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 					'opt_version' => '8',		// Increment when changing default option values.
 					'short'       => 'WPSSO MRP',	// Short plugin name.
 					'name'        => 'WPSSO Schema Merchant Return Policy Manager',
-					'desc'        => 'Manage any number of Merchant Return Policies for Google Merchant listings.',
+					'desc'        => 'Manage Merchant Return Policies for Google Merchant listings and Schema markup.',
 					'slug'        => 'wpsso-merchant-return-policy',
 					'base'        => 'wpsso-merchant-return-policy/wpsso-merchant-return-policy.php',
 					'update_auth' => '',		// No premium version.

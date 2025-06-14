@@ -31,7 +31,8 @@ msgstr ""
 #: gettext/gettext-lib-config.php:6
 msgctxt "plugin description"
 msgid ""
-"Manage any number of Merchant Return Policies for Google Merchant listings."
+"Manage Merchant Return Policies for Google Merchant listings and Schema "
+"markup."
 msgstr ""
 
 #: gettext/gettext-lib-config.php:7
@@ -390,7 +391,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Manage any number of Merchant Return Policies for Google Merchant listings."
+"Manage Merchant Return Policies for Google Merchant listings and Schema "
+"markup."
 msgstr ""
 
 #. Author of the plugin/theme

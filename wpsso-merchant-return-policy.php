@@ -10,7 +10,7 @@
  * Author URI: https://wpsso.com/
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
- * Description: Manage any number of Merchant Return Policies for Google Merchant listings.
+ * Description: Manage Merchant Return Policies for Google Merchant listings and Schema markup.
  * Requires Plugins: wpsso
  * Requires PHP: 7.4.33
  * Requires At Least: 5.9
