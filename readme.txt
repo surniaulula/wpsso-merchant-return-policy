@@ -1,5 +1,5 @@
-=== WPSSO Merchant Return Policy Manager ===
-Plugin Name: WPSSO Merchant Return Policy Manager
+=== WPSSO Schema Merchant Return Policy Manager ===
+Plugin Name: WPSSO Schema Merchant Return Policy Manager
 Plugin Slug: wpsso-merchant-return-policy
 Text Domain: wpsso-merchant-return-policy
 Domain Path: /languages
@@ -26,7 +26,7 @@ Manage any number of Merchant Return Policies for Google Merchant listings.
 
 **E-Commerce Plugin Optional:**
 
-WooCommerce is suggested but not required - the WPSSO Merchant Return Policy Manager add-on can also provide return policy markup for custom product pages.
+WooCommerce is suggested but not required - the WPSSO Schema Merchant Return Policy Manager add-on can also provide return policy markup for custom product pages.
 
 <!-- /about -->
 
@@ -41,14 +41,14 @@ WooCommerce is suggested but not required - the WPSSO Merchant Return Policy Man
 
 <h3>WPSSO Core Required</h3>
 
-WPSSO Merchant Return Policy Manager (WPSSO MRP) is an add-on for the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/), which creates extensive and complete structured data to present your content at its best for social sites and search results – no matter how URLs are shared, reshared, messaged, posted, embedded, or crawled.
+WPSSO Schema Merchant Return Policy Manager (WPSSO MRP) is an add-on for the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/), which creates extensive and complete structured data to present your content at its best for social sites and search results – no matter how URLs are shared, reshared, messaged, posted, embedded, or crawled.
 
 == Installation ==
 
 <h3 class="top">Install and Uninstall</h3>
 
-* [Install the WPSSO Merchant Return Policy Manager add-on](https://wpsso.com/docs/plugins/wpsso-merchant-return-policy/installation/install-the-plugin/).
-* [Uninstall the WPSSO Merchant Return Policy Manager add-on](https://wpsso.com/docs/plugins/wpsso-merchant-return-policy/installation/uninstall-the-plugin/).
+* [Install the WPSSO Schema Merchant Return Policy Manager add-on](https://wpsso.com/docs/plugins/wpsso-merchant-return-policy/installation/install-the-plugin/).
+* [Uninstall the WPSSO Schema Merchant Return Policy Manager add-on](https://wpsso.com/docs/plugins/wpsso-merchant-return-policy/installation/uninstall-the-plugin/).
 
 == Frequently Asked Questions ==
 
@@ -81,6 +81,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 <p><strong>WPSSO Core Standard edition users (ie. the plugin hosted on WordPress.org) have access to <a href="https://wordpress.org/plugins/merchant-return-policy/advanced/">the latest development version under the Advanced Options section</a>.</strong></p>
 
 <h3>Changelog / Release Notes</h3>
+
+**Version 3.0.0-dev.4 (2025/06/14)**
+
+* **New Features**
+	* Renamed the add-on to "WPSSO Schema Merchant Return Policy Manager".
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v7.4.33.
+	* WordPress v5.9.
+	* WPSSO Core v20.0.0-dev.4.
 
 **Version 2.6.2 (2025/03/08)**
 
@@ -143,6 +158,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v18.5.0.
 
 == Upgrade Notice ==
+
+= 3.0.0-dev.4 =
+
+(2025/06/14) Renamed the add-on to "WPSSO Schema Merchant Return Policy Manager".
 
 = 2.6.2 =
 
