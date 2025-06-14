@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: WPSSO Merchant Return Policy Manager
+ * Plugin Name: WPSSO Schema Merchant Return Policy Manager
  * Plugin Slug: wpsso-merchant-return-policy
  * Text Domain: wpsso-merchant-return-policy
  * Domain Path: /languages
@@ -15,7 +15,7 @@
  * Requires PHP: 7.4.33
  * Requires At Least: 5.9
  * Tested Up To: 6.8.1
- * Version: 2.6.2
+ * Version: 3.0.0-dev.4
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *

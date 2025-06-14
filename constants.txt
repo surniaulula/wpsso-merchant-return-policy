@@ -13,6 +13,6 @@ WPSSOMRP_MRP_POST_TYPE
 /*
  * Define in your wp-config.php file to change the default value.
  */
-WPSSOMRP_MRP_MENU_ORDER        = 20
+WPSSOMRP_MRP_MENU_ORDER        = 89
 WPSSOMRP_MRP_CATEGORY_TAXONOMY = false
 WPSSOMRP_MRP_COUNTRIES_MAX     = 50

@@ -17,19 +17,19 @@ if ( ! class_exists( 'WpssoMrpRegister' ) ) {
 		public function __construct() {
 
 			register_activation_hook( WPSSOMRP_FILEPATH, array( $this, 'network_activate' ) );
-
 			register_deactivation_hook( WPSSOMRP_FILEPATH, array( $this, 'network_deactivate' ) );
 
 			if ( is_multisite() ) {
 
 				add_action( 'wpmu_new_blog', array( $this, 'wpmu_new_blog' ), 10, 6 );
-
 				add_action( 'wpmu_activate_blog', array( $this, 'wpmu_activate_blog' ), 10, 5 );
 			}
 
-			add_action( 'wpsso_init_options', array( __CLASS__, 'register_mrp_post_type' ), WPSSOMRP_MRP_MENU_ORDER, 0 );
-
-			add_action( 'wpsso_init_options', array( __CLASS__, 'register_mrp_category_taxonomy' ), WPSSOMRP_MRP_MENU_ORDER, 0 );
+			/*
+			 * Wpsso->set_objects() runs at init priority 10.
+			 */
+			add_action( 'wpsso_init_options', array( __CLASS__, 'register_mrp_post_type' ) );
+			add_action( 'wpsso_init_options', array( __CLASS__, 'register_mrp_category_taxonomy' ) );
 		}
 
 		/*
@@ -198,8 +198,6 @@ if ( ! class_exists( 'WpssoMrpRegister' ) ) {
 				'show_in_menu'        => true,
 				'show_in_admin_bar'   => true,
 				'menu_position'       => WPSSOMRP_MRP_MENU_ORDER,
-				//'menu_icon'         => 'dashicons-cart',
-				//'menu_icon'         => 'dashicons-store',
 				'menu_icon'           => 'dashicons-tag',
 				'capability_type'     => 'page',
 				'hierarchical'        => false,

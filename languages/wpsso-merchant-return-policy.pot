@@ -1,8 +1,8 @@
-# Copyright (C) 2025 WPSSO Merchant Return Policy Manager
-# This file is distributed under the same license as the WPSSO Merchant Return Policy Manager package.
+# Copyright (C) 2025 WPSSO Schema Merchant Return Policy Manager
+# This file is distributed under the same license as the WPSSO Schema Merchant Return Policy Manager package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Merchant Return Policy Manager 2.6.2\n"
+"Project-Id-Version: WPSSO Schema Merchant Return Policy Manager 3.0.0-dev.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-merchant-"
 "return-policy\n"
 "POT-Creation-Date: 2025-MO-DA HO:MI+ZONE\n"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: gettext/gettext-lib-config.php:5
 msgctxt "plugin name"
-msgid "WPSSO Merchant Return Policy Manager"
+msgid "WPSSO Schema Merchant Return Policy Manager"
 msgstr ""
 
 #: gettext/gettext-lib-config.php:6
@@ -297,91 +297,91 @@ msgctxt "post type description"
 msgid "Return Policy"
 msgstr ""
 
-#: lib/register.php:226
+#: lib/register.php:224
 msgid "Categories"
 msgstr ""
 
-#: lib/register.php:227
+#: lib/register.php:225
 msgid "Category"
 msgstr ""
 
-#: lib/register.php:228
+#: lib/register.php:226
 msgctxt "admin menu name"
 msgid "Categories"
 msgstr ""
 
-#: lib/register.php:229
+#: lib/register.php:227
 msgid "All Categories"
 msgstr ""
 
-#: lib/register.php:230
+#: lib/register.php:228
 msgid "Edit Category"
 msgstr ""
 
-#: lib/register.php:231
+#: lib/register.php:229
 msgid "View Category"
 msgstr ""
 
-#: lib/register.php:232
+#: lib/register.php:230
 msgid "Update Category"
 msgstr ""
 
-#: lib/register.php:233
+#: lib/register.php:231
 msgid "Add New Category"
 msgstr ""
 
-#: lib/register.php:234
+#: lib/register.php:232
 msgid "New Category Name"
 msgstr ""
 
-#: lib/register.php:235
+#: lib/register.php:233
 msgid "Parent Category"
 msgstr ""
 
-#: lib/register.php:236
+#: lib/register.php:234
 msgid "Parent Category:"
 msgstr ""
 
-#: lib/register.php:237
+#: lib/register.php:235
 msgid "Search Categories"
 msgstr ""
 
-#: lib/register.php:238
+#: lib/register.php:236
 msgid "Popular Categories"
 msgstr ""
 
-#: lib/register.php:239
+#: lib/register.php:237
 msgid "Separate categories with commas"
 msgstr ""
 
-#: lib/register.php:240
+#: lib/register.php:238
 msgid "Add or remove categories"
 msgstr ""
 
-#: lib/register.php:241
+#: lib/register.php:239
 msgid "Choose from the most used"
 msgstr ""
 
-#: lib/register.php:242
+#: lib/register.php:240
 msgid "No categories found."
 msgstr ""
 
-#: lib/register.php:243
+#: lib/register.php:241
 msgid "← Back to categories"
 msgstr ""
 
-#: lib/register.php:247
+#: lib/register.php:245
 msgctxt "taxonomy label"
 msgid "Categories"
 msgstr ""
 
-#: lib/register.php:258
+#: lib/register.php:256
 msgctxt "taxonomy description"
 msgid "Categories for Return Policies"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "WPSSO Merchant Return Policy Manager"
+msgid "WPSSO Schema Merchant Return Policy Manager"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

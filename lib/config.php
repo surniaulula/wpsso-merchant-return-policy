@@ -17,10 +17,10 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssomrp' => array(			// Plugin acronym.
-					'version'     => '2.6.2',	// Plugin version.
+					'version'     => '3.0.0-dev.4',	// Plugin version.
 					'opt_version' => '8',		// Increment when changing default option values.
 					'short'       => 'WPSSO MRP',	// Short plugin name.
-					'name'        => 'WPSSO Merchant Return Policy Manager',
+					'name'        => 'WPSSO Schema Merchant Return Policy Manager',
 					'desc'        => 'Manage any number of Merchant Return Policies for Google Merchant listings.',
 					'slug'        => 'wpsso-merchant-return-policy',
 					'base'        => 'wpsso-merchant-return-policy/wpsso-merchant-return-policy.php',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '18.20.0',
+							'min_version'   => '20.0.0-dev.4',
 						),
 					),
 
@@ -164,7 +164,7 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 			 *	80 – below Settings
 			 *	100 – below second separator
 			 */
-			$var_const[ 'WPSSOMRP_MRP_MENU_ORDER' ]        = 20;
+			$var_const[ 'WPSSOMRP_MRP_MENU_ORDER' ]        = 89;
 			$var_const[ 'WPSSOMRP_MRP_CATEGORY_TAXONOMY' ] = false;
 			$var_const[ 'WPSSOMRP_MRP_COUNTRIES_MAX' ]     = 50;
 
