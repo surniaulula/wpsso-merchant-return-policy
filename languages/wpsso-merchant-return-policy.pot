@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema Merchant Return Policy Manager package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Merchant Return Policy Manager 3.0.0\n"
+"Project-Id-Version: WPSSO Schema Merchant Return Policy Manager 3.1.0-dev.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-merchant-"
 "return-policy\n"
 "POT-Creation-Date: 2025-MO-DA HO:MI+ZONE\n"
@@ -142,25 +142,25 @@ msgctxt "option value"
 msgid "Return Policy #%d"
 msgstr ""
 
-#: lib/integ/admin/post.php:77
+#: lib/integ/admin/post.php:84
 msgctxt "metabox title"
 msgid "Return Policy"
 msgstr ""
 
-#: lib/mrp.php:91 lib/mrp.php:102
+#: lib/mrp.php:98 lib/mrp.php:110
 msgid "Unable to provide information for return policy ID #%s."
 msgstr ""
 
-#: lib/mrp.php:94
+#: lib/mrp.php:102
 msgid ""
 "Please publish return policy ID #%s or select a different return policy."
 msgstr ""
 
-#: lib/mrp.php:104
+#: lib/mrp.php:112
 msgid "Return policy ID #%s does not exist."
 msgstr ""
 
-#: lib/mrp.php:106
+#: lib/mrp.php:114
 msgid "Please select a different return policy."
 msgstr ""
 

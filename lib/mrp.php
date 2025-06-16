@@ -61,7 +61,7 @@ if ( ! class_exists( 'WpssoMrpMrp' ) ) {
 		/*
 		 * Get a specific return policy id.
 		 */
-		public static function get_id( $mrp_id, $mixed = 'current', $opt_key = false ) {
+		public static function get_id( $mrp_id, $mixed = 'current', $opt_key = false, $id_prefix = 'mrp' ) {
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -75,9 +75,16 @@ if ( ! class_exists( 'WpssoMrpMrp' ) ) {
 
 			$mrp_opts = false;	// Return false by default.
 
-			if ( 0 === strpos( $mrp_id, 'mrp-' ) ) {
+			/*
+			 * Check that the option value is not true, false, null, empty string, or 'none'.
+			 */
+			if ( ! SucomUtil::is_valid_option_value( $mrp_id ) ) {
 
-				$post_id  = substr( $mrp_id, 4 );
+				return false === $opt_key ? $mrp_opts : null;
+
+			} elseif ( 0 === strpos( $mrp_id, $id_prefix . '-' ) ) {
+
+				$post_id  = substr( $mrp_id, strlen( $id_prefix ) + 1 );
 				$post_mod = $wpsso->post->get_mod( $post_id );
 
 				if ( 'publish' === $post_mod[ 'post_status' ] ) {
@@ -88,23 +95,23 @@ if ( ! class_exists( 'WpssoMrpMrp' ) ) {
 
 					$mrp_page_link = get_edit_post_link( $post_id );
 
-					$notice_msg = sprintf( __( 'Unable to provide information for return policy ID #%s.',
-						'wpsso-merchant-return-policy' ), $post_id ) . ' ';
+					$notice_msg = sprintf( __( 'Unable to provide information for return policy ID #%s.', 'wpsso-merchant-return-policy' ), $post_id ) . ' ';
+
 					$notice_msg .= $mrp_page_link ? '<a href="' . $mrp_page_link . '">' : '';
-					$notice_msg .= sprintf( __( 'Please publish return policy ID #%s or select a different return policy.',
-						'wpsso-merchant-return-policy' ), $post_id );
+
+					$notice_msg .= sprintf( __( 'Please publish return policy ID #%s or select a different return policy.', 'wpsso-merchant-return-policy' ), $post_id );
+
 					$notice_msg .= $mrp_page_link ? '</a>' : '';
 
 					$wpsso->notice->err( $notice_msg );
 
 				} else {
 
-					$notice_msg = sprintf( __( 'Unable to provide information for return policy ID #%s.',
-						'wpsso-merchant-return-policy' ), $post_id ) . ' ';
-					$notice_msg .= sprintf( __( 'Return policy ID #%s does not exist.',
-						'wpsso-merchant-return-policy' ), $post_id ) . ' ';
-					$notice_msg .= __( 'Please select a different return policy.',
-						'wpsso-merchant-return-policy' );
+					$notice_msg = sprintf( __( 'Unable to provide information for return policy ID #%s.', 'wpsso-merchant-return-policy' ), $post_id ) . ' ';
+
+					$notice_msg .= sprintf( __( 'Return policy ID #%s does not exist.', 'wpsso-merchant-return-policy' ), $post_id ) . ' ';
+
+					$notice_msg .= __( 'Please select a different return policy.', 'wpsso-merchant-return-policy' );
 
 					$wpsso->notice->err( $notice_msg );
 				}
@@ -115,7 +122,6 @@ if ( ! class_exists( 'WpssoMrpMrp' ) ) {
 				$mrp_opts[ 'mrp_id' ] = $mrp_id;
 
 				$mrp_opts = array_merge( WpssoMrpConfig::$cf[ 'opt' ][ 'mrp_md_defaults' ], $mrp_opts );	// Complete the array.
-
 				$mrp_opts = SucomUtil::preg_grep_keys( '/^mrp_/', $mrp_opts );
 			}
 
