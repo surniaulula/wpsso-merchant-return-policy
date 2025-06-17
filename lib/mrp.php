@@ -61,7 +61,7 @@ if ( ! class_exists( 'WpssoMrpMrp' ) ) {
 		/*
 		 * Get a specific return policy id.
 		 */
-		public static function get_id( $mrp_id, $mixed = 'current', $opt_key = false, $id_prefix = 'mrp' ) {
+		public static function get_id( $mrp_id, $mixed = 'current', $opt_key = false ) {
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -82,9 +82,9 @@ if ( ! class_exists( 'WpssoMrpMrp' ) ) {
 
 				return false === $opt_key ? $mrp_opts : null;
 
-			} elseif ( 0 === strpos( $mrp_id, $id_prefix . '-' ) ) {
+			} elseif ( 0 === strpos( $mrp_id, 'mrp-' ) ) {
 
-				$post_id  = substr( $mrp_id, strlen( $id_prefix ) + 1 );
+				$post_id  = substr( $mrp_id, strlen( 'mrp-' ) );
 				$post_mod = $wpsso->post->get_mod( $post_id );
 
 				if ( 'publish' === $post_mod[ 'post_status' ] ) {
