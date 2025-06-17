@@ -82,7 +82,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.1.0-dev.8 (2025/06/16)**
+**Version 3.1.0-dev.9 (2025/06/17)**
 
 * **New Features**
 	* None.
@@ -95,7 +95,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.4.33.
 	* WordPress v5.9.
-	* WPSSO Core v21.0.0-dev.8.
+	* WPSSO Core v21.0.0-dev.9.
 
 **Version 3.0.0 (2025/06/14)**
 
@@ -174,9 +174,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.1.0-dev.8 =
+= 3.1.0-dev.9 =
 
-(2025/06/16) Current development version - see changelog for details.
+(2025/06/17) Current development version - see changelog for details.
 
 = 3.0.0 =
 
