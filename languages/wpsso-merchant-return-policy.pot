@@ -2,8 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema Merchant Return Policy Manager package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Merchant Return Policy Manager 3.1.0-"
-"dev.10\n"
+"Project-Id-Version: WPSSO Schema Merchant Return Policy Manager 3.1.0-b.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-merchant-"
 "return-policy\n"
 "POT-Creation-Date: 2025-MO-DA HO:MI+ZONE\n"
