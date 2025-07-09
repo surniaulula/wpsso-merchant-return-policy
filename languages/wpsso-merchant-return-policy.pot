@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema Merchant Return Policy Manager package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Merchant Return Policy Manager 3.1.0\n"
+"Project-Id-Version: WPSSO Schema Merchant Return Policy Manager 4.0.0-dev.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-merchant-"
 "return-policy\n"
 "POT-Creation-Date: 2025-MO-DA HO:MI+ZONE\n"
@@ -60,32 +60,56 @@ msgctxt "metabox title"
 msgid "Return Policy Information"
 msgstr ""
 
-#: lib/filters-edit.php:68
+#: lib/filters-edit.php:73
 msgctxt "option label"
 msgid "Return Policy Category"
 msgstr ""
 
-#: lib/filters-edit.php:78
+#: lib/filters-edit.php:83
 msgctxt "option label"
 msgid "Return Window Days"
 msgstr ""
 
-#: lib/filters-edit.php:89
+#: lib/filters-edit.php:94
 msgctxt "option label"
 msgid "Return Methods"
 msgstr ""
 
-#: lib/filters-edit.php:98
+#: lib/filters-edit.php:104
+msgctxt "option label"
+msgid "Return Label"
+msgstr ""
+
+#: lib/filters-edit.php:114
 msgctxt "option label"
 msgid "Return Fees"
 msgstr ""
 
-#: lib/filters-edit.php:110
+#: lib/filters-edit.php:126
 msgctxt "option label"
 msgid "Shipping Fees"
 msgstr ""
 
-#: lib/filters-edit.php:116
+#: lib/filters-edit.php:138
+msgctxt "option label"
+msgid "Restocking Fees"
+msgstr ""
+
+#: lib/filters-edit.php:141
+msgid "or"
+msgstr ""
+
+#: lib/filters-edit.php:156
+msgctxt "option label"
+msgid "Refund Types"
+msgstr ""
+
+#: lib/filters-edit.php:169
+msgctxt "option label"
+msgid "Item Conditions"
+msgstr ""
+
+#: lib/filters-edit.php:177
 msgctxt "option label"
 msgid "Applicable Countries"
 msgstr ""
@@ -118,22 +142,45 @@ msgid "The type of return methods offered."
 msgstr ""
 
 #: lib/filters-messages.php:78
-msgid "The type of return fees."
+msgid ""
+"The method by which the consumer can obtain a return shipping label for a "
+"product."
 msgstr ""
 
 #: lib/filters-messages.php:84
-msgid "The cost of shipping for returning a product."
+msgid "The type of return fees."
 msgstr ""
 
 #: lib/filters-messages.php:90
+msgid "The cost of shipping for returning a product."
+msgstr ""
+
+#: lib/filters-messages.php:96
+msgid "The restocking fee charged to the consumer when returning a product."
+msgstr ""
+
+#: lib/filters-messages.php:98
+msgid "You can choose a fixed amount or a percentage of the price paid."
+msgstr ""
+
+#: lib/filters-messages.php:104
+msgid ""
+"The type of refund(s) available for the consumer when returning a product."
+msgstr ""
+
+#: lib/filters-messages.php:110
+msgid "The acceptable conditions of an item which can be returned."
+msgstr ""
+
+#: lib/filters-messages.php:116
 msgid "The countries this return policy applies to."
 msgstr ""
 
-#: lib/filters-messages.php:92
+#: lib/filters-messages.php:118
 msgid "Note that Google limits the selection to a maximum of %d countries."
 msgstr ""
 
-#: lib/filters-messages.php:114
+#: lib/filters-messages.php:140
 msgid "Note that Google limits this selection to a maximum of %d countries."
 msgstr ""
 

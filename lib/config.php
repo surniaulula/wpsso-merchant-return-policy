@@ -17,8 +17,8 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssomrp' => array(			// Plugin acronym.
-					'version'     => '3.1.0',	// Plugin version.
-					'opt_version' => '8',		// Increment when changing default option values.
+					'version'     => '4.0.0-dev.2',	// Plugin version.
+					'opt_version' => '11',		// Increment when changing default option values.
 					'short'       => 'WPSSO MRP',	// Short plugin name.
 					'name'        => 'WPSSO Schema Merchant Return Policy Manager',
 					'desc'        => 'Manage Merchant Return Policies for Google Merchant listings and Schema markup.',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '21.0.0',
+							'min_version'   => '21.2.0-dev.2',
 						),
 					),
 
@@ -73,16 +73,22 @@ if ( ! class_exists( 'WpssoMrpConfig' ) ) {
 			 */
 			'opt' => array(
 				'mrp_md_defaults' => array(
-					'mrp_name'                                 => '',	// Return Policy Name.
-					'mrp_desc'                                 => '',
-					'mrp_is_schema_def_product_mrp'            => 0,	// Default Product Return Policy.
-					'mrp_category'                             => 'https://schema.org/MerchantReturnUnspecified',	// Return Policy Category.
-					'mrp_return_days'                          => 30,	// Return Window Days.
-					'mrp_method_https_schema_org_ReturnByMail' => 1,	// Return Methods.
-					'mrp_return_fees'                          => 'https://schema.org/ReturnFeesCustomerResponsibility',	// Return Fees.
-					'mrp_shipping_amount'                      => 0,	// Shipping Fees (Amount).
-					'mrp_shipping_currency'                    => 'USD',	// Shipping Fees (Currency).
-					'mrp_country_US'                           => 1,	// Applicable Countries.
+					'mrp_name'                                         => '',		// Return Policy Name.
+					'mrp_desc'                                         => '',
+					'mrp_is_schema_def_product_mrp'                    => 0,		// Default Product Return Policy.
+					'mrp_category'                                     => 'https://schema.org/MerchantReturnFiniteReturnWindow',	// Return Policy Category.
+					'mrp_return_days'                                  => 30,		// Return Window Days.
+					'mrp_method_https_schema_org_ReturnByMail'         => 1,		// Return Methods.
+					'mrp_return_label_source'                          => 'https://schema.org/ReturnLabelDownloadAndPrint',	// Return Label.
+					'mrp_return_fees'                                  => 'https://schema.org/FreeReturn',			// Return Fees.
+					'mrp_shipping_amount'                              => 0,		// Shipping Fees (Amount).
+					'mrp_shipping_currency'                            => 'USD',		// Shipping Fees (Currency).
+					'mrp_restocking_amount'                            => 0,		// Restocking Fees (Amount).
+					'mrp_restocking_currency'                          => 'USD',		// Restocking Fees (Currency).
+					'mrp_restocking_pct'                               => 0,		// Restocking Fees (Percent).
+					'mrp_refund_type_https_schema_org_FullRefund'      => 1,		// Refund Types.
+					'mrp_item_condition_https_schema_org_NewCondition' => 1,		// Item Conditions.
+					'mrp_country_US'                                   => 1,		// Applicable Countries.
 				),
 			),
 			'form' => array(

@@ -73,7 +73,13 @@ if ( ! class_exists( 'WpssoMrpFiltersMessages' ) ) {
 
 					break;
 
-				case 'tooltip-meta-mrp_return_fees':	// Shipping Fees.
+				case 'tooltip-meta-mrp_return_label_source':	// Return Label.
+
+					$text = __( 'The method by which the consumer can obtain a return shipping label for a product.', 'wpsso-merchant-return-policy' ) . ' ';
+
+					break;
+
+				case 'tooltip-meta-mrp_return_fees':	// Return Fees.
 
 					$text = __( 'The type of return fees.', 'wpsso-merchant-return-policy' ) . ' ';
 
@@ -82,6 +88,26 @@ if ( ! class_exists( 'WpssoMrpFiltersMessages' ) ) {
 				case 'tooltip-meta-mrp_shipping_fees':	// Shipping Fees.
 
 					$text = __( 'The cost of shipping for returning a product.', 'wpsso-merchant-return-policy' ) . ' ';
+
+					break;
+
+				case 'tooltip-meta-mrp_restocking_fees':	// Restocking Fees.
+
+					$text = __( 'The restocking fee charged to the consumer when returning a product.', 'wpsso-merchant-return-policy' ) . ' ';
+					
+					$text .= __( 'You can choose a fixed amount or a percentage of the price paid.', 'wpsso-merchant-return-policy' ) . ' ';
+
+					break;
+
+				case 'tooltip-meta-mrp_refund_types':	// Refund Types.
+
+					$text = __( 'The type of refund(s) available for the consumer when returning a product.', 'wpsso-merchant-return-policy' ) . ' ';
+
+					break;
+
+				case 'tooltip-meta-mrp_item_conditions':	// Item Conditions.
+
+					$text = __( 'The acceptable conditions of an item which can be returned.', 'wpsso-merchant-return-policy' ) . ' ';
 
 					break;
 

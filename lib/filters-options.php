@@ -143,14 +143,20 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 
 					unset( $md_opts[ 'mrp_is_' . $opts_key ] );
 				}
+				
+				if ( 'https://schema.org/MerchantReturnNotPermitted' === $md_opts[ 'mrp_category' ] ) {
+
+					$md_opts = SucomUtil::preg_grep_keys( '/^mrp_(method|refund_type|item_condition|country)_/', $md_opts, $invert = true );
+				}
 
 				if ( empty( $md_opts[ 'mrp_method_https_schema_org_ReturnByMail' ] ) ) {
 
 					$md_defs = $this->filter_get_post_defaults( array(), $post_id, $mod );
 
-					$md_opts[ 'mrp_return_fees' ]       = $md_defs[ 'mrp_return_fees' ];
-					$md_opts[ 'mrp_shipping_amount' ]   = $md_defs[ 'mrp_shipping_amount' ];
-					$md_opts[ 'mrp_shipping_currency' ] = $md_defs[ 'mrp_shipping_currency' ];
+					$md_opts[ 'mrp_return_label_source' ] = $md_defs[ 'mrp_return_label_source' ];
+					$md_opts[ 'mrp_return_fees' ]         = $md_defs[ 'mrp_return_fees' ];
+					$md_opts[ 'mrp_shipping_amount' ]     = $md_defs[ 'mrp_shipping_amount' ];
+					$md_opts[ 'mrp_shipping_currency' ]   = $md_defs[ 'mrp_shipping_currency' ];
 				}
 
 				if ( 'https://schema.org/ReturnShippingFees' === $md_opts[ 'mrp_return_fees' ] ) {
@@ -159,7 +165,8 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 
 						$md_opts[ 'mrp_return_fees' ] = 'https://schema.org/FreeReturn';
 					}
-				}
+
+				} else $md_opts[ 'mrp_shipping_amount' ] = 0;
 			}
 
 			return $md_opts;
@@ -193,6 +200,7 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 				case 'mrp_category':
 				case 'mrp_return_fees':
 				case 'mrp_shipping_currency':
+				case 'mrp_restocking_currency':
 
 					return 'not_blank';
 
@@ -201,12 +209,16 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 					return 'zero_pos_int';
 
 				case 'mrp_shipping_amount':
+				case 'mrp_restocking_amount':
+				case 'mrp_restocking_pct':
 
 					return 'numeric';
 
 				case ( 0 === strpos( $base_key, 'mrp_is_' ) ? true : false ):
 				case ( 0 === strpos( $base_key, 'mrp_country_' ) ? true : false ):
 				case ( 0 === strpos( $base_key, 'mrp_method_' ) ? true : false ):
+				case ( 0 === strpos( $base_key, 'mrp_refund_type_' ) ? true : false ):
+				case ( 0 === strpos( $base_key, 'mrp_item_condition_' ) ? true : false ):
 
 					return 'checkbox';
 			}

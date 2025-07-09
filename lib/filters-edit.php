@@ -63,6 +63,11 @@ if ( ! class_exists( 'WpssoMrpFiltersEdit' ) ) {
 					'header'   => 'h5',
 					'label'    => _x( 'Return Policy Information', 'metabox title', 'wpsso-merchant-return-policy' ),
 				),
+
+				/*
+				 * See https://schema.org/MerchantReturnEnumeration.
+				 * See https://developers.google.com/search/docs/appearance/structured-data/return-policy.
+				 */
 				'mrp_category' => array(
 					'th_class' => 'medium',
 					'label'    => _x( 'Return Policy Category', 'option label', 'wpsso-merchant-return-policy' ),
@@ -92,8 +97,19 @@ if ( ! class_exists( 'WpssoMrpFiltersEdit' ) ) {
 						$css_class = 'column-list', $css_id = '', $is_assoc = true, $is_disabled = false,
 							$event_names = 'on_change_unhide_rows' ),
 				),
+				'mrp_return_label_source' => array(
+					'tr_class' => $form->get_css_class_on_change( $select_id = 'mrp_method_https_schema_org_ReturnByMail',
+						$select_value = 1 ),
+					'th_class' => 'medium',
+					'label'    => _x( 'Return Label', 'option label', 'wpsso-merchant-return-policy' ),
+					'tooltip'  => 'meta-mrp_return_label_source',
+					'content'  => $form->get_select( 'mrp_return_label_source', $this->p->cf[ 'form' ][ 'return_label_source' ],
+						$css_class = '', $css_id = '', $is_assoc = true, $is_disabled = false,
+							$selected = false, $event_names = 'on_change_unhide_rows' ),
+				),
 				'mrp_return_fees' => array(
-					'tr_class' => $form->get_css_class_on_change( $select_id = 'mrp_method_https_schema_org_ReturnByMail', $select_value = 1 ),
+					'tr_class' => $form->get_css_class_on_change( $select_id = 'mrp_method_https_schema_org_ReturnByMail',
+						$select_value = 1 ),
 					'th_class' => 'medium',
 					'label'    => _x( 'Return Fees', 'option label', 'wpsso-merchant-return-policy' ),
 					'tooltip'  => 'meta-mrp_return_fees',
@@ -110,6 +126,51 @@ if ( ! class_exists( 'WpssoMrpFiltersEdit' ) ) {
 					'label'    => _x( 'Shipping Fees', 'option label', 'wpsso-merchant-return-policy' ),
 					'tooltip'  => 'meta-mrp_shipping_fees',
 					'content'  => $form->get_amount_currency( 'mrp_shipping_amount', 'mrp_shipping_currency' ),
+				),
+
+				'mrp_restocking_fees' => array(
+					'tr_class' => $form->get_css_class_on_change( $select_id = 'mrp_category',
+						$select_values = array(
+							'https://schema.org/MerchantReturnFiniteReturnWindow',
+							'https://schema.org/MerchantReturnUnlimitedWindow',
+						) ),
+					'th_class' => 'medium',
+					'label'    => _x( 'Restocking Fees', 'option label', 'wpsso-merchant-return-policy' ),
+					'tooltip'  => 'meta-mrp_restocking_fees',
+					'content'  => $form->get_amount_currency( 'mrp_restocking_amount', 'mrp_restocking_currency' ) . ' ' .
+						__( 'or', 'wpsso-merchant-return-policy' ) . ' ' .
+						$form->get_input( 'mrp_restocking_pct', $css_class = 'xshort' ) . '%',
+				),
+
+				/*
+				 * See https://schema.org/RefundTypeEnumeration.
+				 * See https://developers.google.com/search/docs/appearance/structured-data/return-policy.
+				 */
+				'mrp_refund_types' => array(
+					'tr_class' => $form->get_css_class_on_change( $select_id = 'mrp_category',
+						$select_values = array(
+							'https://schema.org/MerchantReturnFiniteReturnWindow',
+							'https://schema.org/MerchantReturnUnlimitedWindow',
+						) ),
+					'th_class' => 'medium',
+					'label'    => _x( 'Refund Types', 'option label', 'wpsso-merchant-return-policy' ),
+					'tooltip'  => 'meta-mrp_refund_types',
+					'content'  => $form->get_checklist( 'mrp_refund_type', $this->p->cf[ 'form' ][ 'refund_type' ],
+						$css_class = 'column-list', $css_id = '', $is_assoc = true, $is_disabled = false,
+							$selected = false ),
+				),
+				'mrp_item_conditions' => array(
+					'tr_class' => $form->get_css_class_on_change( $select_id = 'mrp_category',
+						$select_values = array(
+							'https://schema.org/MerchantReturnFiniteReturnWindow',
+							'https://schema.org/MerchantReturnUnlimitedWindow',
+						) ),
+					'th_class' => 'medium',
+					'label'    => _x( 'Item Conditions', 'option label', 'wpsso-merchant-return-policy' ),
+					'tooltip'  => 'meta-mrp_item_conditions',
+					'content'  => $form->get_checklist( 'mrp_item_condition', $this->p->cf[ 'form' ][ 'item_condition' ],
+						$css_class = 'column-list', $css_id = '', $is_assoc = true, $is_disabled = false,
+							$selected = false ),
 				),
 				'mrp_countries' => array(
 					'th_class' => 'medium',
