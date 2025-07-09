@@ -82,6 +82,25 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.0.0-dev.2 (2025/07/09)**
+
+* **New Features**
+	* Added new return policy options:
+		* Return Label
+		* Restocking Fees
+		* Refund Types
+		* Item Conditions
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v7.4.33.
+	* WordPress v5.9.
+	* WPSSO Core v21.0.0.
+
 **Version 3.1.0 (2025/06/18)**
 
 * **New Features**
@@ -173,6 +192,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v18.5.0.
 
 == Upgrade Notice ==
+
+= 4.0.0-dev.2 =
+
+(2025/07/09) Added new return policy options.
 
 = 3.1.0 =
 
