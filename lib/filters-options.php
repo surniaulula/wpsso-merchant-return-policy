@@ -198,6 +198,7 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 					return 'ok_blank';
 
 				case 'mrp_category':
+				case 'mrp_return_label_source':
 				case 'mrp_return_fees':
 				case 'mrp_shipping_currency':
 				case 'mrp_restocking_currency':
