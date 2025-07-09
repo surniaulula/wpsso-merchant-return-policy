@@ -101,7 +101,7 @@ if ( ! class_exists( 'WpssoMrpFiltersMessages' ) ) {
 
 				case 'tooltip-meta-mrp_refund_types':	// Refund Types.
 
-					$text = __( 'The type of refund(s) available for the consumer when returning a product.', 'wpsso-merchant-return-policy' ) . ' ';
+					$text = __( 'The refund types available to the consumer when returning a product.', 'wpsso-merchant-return-policy' ) . ' ';
 
 					break;
 

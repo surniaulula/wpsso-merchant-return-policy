@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema Merchant Return Policy Manager package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Merchant Return Policy Manager 4.0.0-dev.2\n"
+"Project-Id-Version: WPSSO Schema Merchant Return Policy Manager 4.0.0-b.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-merchant-"
 "return-policy\n"
 "POT-Creation-Date: 2025-MO-DA HO:MI+ZONE\n"
@@ -164,8 +164,7 @@ msgid "You can choose a fixed amount or a percentage of the price paid."
 msgstr ""
 
 #: lib/filters-messages.php:104
-msgid ""
-"The type of refund(s) available for the consumer when returning a product."
+msgid "The refund types available to the consumer when returning a product."
 msgstr ""
 
 #: lib/filters-messages.php:110

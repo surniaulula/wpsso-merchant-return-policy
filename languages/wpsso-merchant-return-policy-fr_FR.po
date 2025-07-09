@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Merchant Return Policy Manager 3.1.0\n"
+"Project-Id-Version: WPSSO Schema Merchant Return Policy Manager 4.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-merchant-return-policy\n"
 "POT-Creation-Date: 2025-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2025-06-17 19:59-0700\n"
+"PO-Revision-Date: 2025-07-09 16:24-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -56,32 +56,56 @@ msgctxt "metabox title"
 msgid "Return Policy Information"
 msgstr "Informations de politique de retour"
 
-#: lib/filters-edit.php:68
+#: lib/filters-edit.php:73
 msgctxt "option label"
 msgid "Return Policy Category"
 msgstr "Catégorie politique de retour"
 
-#: lib/filters-edit.php:78
+#: lib/filters-edit.php:83
 msgctxt "option label"
 msgid "Return Window Days"
 msgstr "Jours fenêtre de retour"
 
-#: lib/filters-edit.php:89
+#: lib/filters-edit.php:94
 msgctxt "option label"
 msgid "Return Methods"
 msgstr "Méthodes de retour"
 
-#: lib/filters-edit.php:98
+#: lib/filters-edit.php:104
+msgctxt "option label"
+msgid "Return Label"
+msgstr "Étiquette de retour"
+
+#: lib/filters-edit.php:114
 msgctxt "option label"
 msgid "Return Fees"
 msgstr "Frais de retour"
 
-#: lib/filters-edit.php:110
+#: lib/filters-edit.php:126
 msgctxt "option label"
 msgid "Shipping Fees"
 msgstr "Frais d'expédition"
 
-#: lib/filters-edit.php:116
+#: lib/filters-edit.php:138
+msgctxt "option label"
+msgid "Restocking Fees"
+msgstr "Frais de réapprovisionnement"
+
+#: lib/filters-edit.php:141
+msgid "or"
+msgstr "ou"
+
+#: lib/filters-edit.php:156
+msgctxt "option label"
+msgid "Refund Types"
+msgstr "Types de remboursement"
+
+#: lib/filters-edit.php:169
+msgctxt "option label"
+msgid "Item Conditions"
+msgstr "Conditions de l'article"
+
+#: lib/filters-edit.php:177
 msgctxt "option label"
 msgid "Applicable Countries"
 msgstr "Pays concernés"
@@ -111,22 +135,42 @@ msgid "The type of return methods offered."
 msgstr "Le type de méthodes de retour proposées."
 
 #: lib/filters-messages.php:78
+msgid "The method by which the consumer can obtain a return shipping label for a product."
+msgstr "La méthode par laquelle le consommateur peut obtenir une étiquette de retour pour un produit."
+
+#: lib/filters-messages.php:84
 msgid "The type of return fees."
 msgstr "Le type de frais de retour."
 
-#: lib/filters-messages.php:84
+#: lib/filters-messages.php:90
 msgid "The cost of shipping for returning a product."
 msgstr "Les frais d'expédition pour le retour d'un produit."
 
-#: lib/filters-messages.php:90
+#: lib/filters-messages.php:96
+msgid "The restocking fee charged to the consumer when returning a product."
+msgstr "Les frais de réapprovisionnement facturés au consommateur lors du retour d'un produit."
+
+#: lib/filters-messages.php:98
+msgid "You can choose a fixed amount or a percentage of the price paid."
+msgstr "Vous pouvez choisir un montant fixe ou un pourcentage du prix payé."
+
+#: lib/filters-messages.php:104
+msgid "The refund types available to the consumer when returning a product."
+msgstr "Les types de remboursement disponibles au consommateur lors du retour d'un produit."
+
+#: lib/filters-messages.php:110
+msgid "The acceptable conditions of an item which can be returned."
+msgstr "Les conditions acceptables d'un article qui peut être retourné."
+
+#: lib/filters-messages.php:116
 msgid "The countries this return policy applies to."
 msgstr "Les pays auxquels cette politique de retour s'applique."
 
-#: lib/filters-messages.php:92
+#: lib/filters-messages.php:118
 msgid "Note that Google limits the selection to a maximum of %d countries."
 msgstr "Notez que Google limite la sélection à un maximum de %d pays."
 
-#: lib/filters-messages.php:114
+#: lib/filters-messages.php:140
 msgid "Note that Google limits this selection to a maximum of %d countries."
 msgstr "Notez que Google limite cette sélection à un maximum de %d pays."
 
