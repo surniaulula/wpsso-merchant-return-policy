@@ -36,7 +36,12 @@ WooCommerce is suggested but not required - the WPSSO Schema Merchant Return Pol
 * Return Policy Category
 * Return Window Days
 * Return Methods
-* Return Shipping Fees
+* Return Label
+* Return Fees
+* Shipping Fees
+* Restocking Fees
+* Refund Types
+* Item Conditions
 * Applicable Countries
 
 <h3>WPSSO Core Required</h3>
@@ -82,7 +87,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.0.0-dev.2 (2025/07/09)**
+**Version 4.0.0-b.1 (2025/07/09)**
 
 * **New Features**
 	* Added new return policy options:
@@ -193,7 +198,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.0.0-dev.2 =
+= 4.0.0-b.1 =
 
 (2025/07/09) Added new return policy options.
 
