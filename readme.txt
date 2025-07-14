@@ -87,7 +87,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.0.0-rc.1 (2025/07/14)**
+**Version 4.0.0 (2025/07/14)**
 
 * **New Features**
 	* Added new return policy options:
@@ -198,7 +198,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.0.0-rc.1 =
+= 4.0.0 =
 
 (2025/07/14) Added new return policy options.
 
