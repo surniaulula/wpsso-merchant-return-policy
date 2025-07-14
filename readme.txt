@@ -12,7 +12,7 @@ Requires Plugins: wpsso
 Requires PHP: 7.4.33
 Requires At Least: 5.9
 Tested Up To: 6.8.1
-Stable Tag: 3.1.0
+Stable Tag: 4.0.0
 
 Manage Merchant Return Policies for Google Merchant listings and Schema markup.
 
@@ -104,125 +104,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.4.33.
 	* WordPress v5.9.
-	* WPSSO Core v21.0.0.
-
-**Version 3.1.0 (2025/06/18)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Refactored the method used to add metaboxes to the return policy editing page.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Refactored the `WpssoMrpIntegAdminPost->add_meta_boxes()` method.
-* **Requires At Least**
-	* PHP v7.4.33.
-	* WordPress v5.9.
-	* WPSSO Core v21.0.0.
-
-**Version 3.0.0 (2025/06/14)**
-
-* **New Features**
-	* Renamed the add-on to "WPSSO Schema Merchant Return Policy Manager".
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-* **Requires At Least**
-	* PHP v7.4.33.
-	* WordPress v5.9.
-	* WPSSO Core v20.0.0.
-
-**Version 2.6.2 (2025/03/08)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Updated admin menu priority.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-* **Requires At Least**
-	* PHP v7.4.33.
-	* WordPress v5.9.
-	* WPSSO Core v18.20.0.
-
-**Version 2.6.1 (2024/09/12)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* Fixed deprecated creation of dynamic property in `WpssoMrpFilters`.
-* **Developer Notes**
-	* None.
-* **Requires At Least**
-	* PHP v7.4.33.
-	* WordPress v5.9.
-	* WPSSO Core v18.10.0.
-
-**Version 2.6.0 (2024/09/07)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Renamed and moved the `WpssoMrpPost` class to `WpssoMrpIntegAdminPost`.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.8.
-	* WPSSO Core v18.7.0.
-
-**Version 2.5.0 (2024/08/25)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Changed the main instantiation action hook from 'init_objects' to 'init_objects_preloader'.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.8.
-	* WPSSO Core v18.5.0.
+	* WPSSO Core v21.2.0.
 
 == Upgrade Notice ==
 
 = 4.0.0 =
 
 (2025/07/14) Added new return policy options.
-
-= 3.1.0 =
-
-(2025/06/18) Refactored the method used to add metaboxes to the return policy editing page.
-
-= 3.0.0 =
-
-(2025/06/14) Renamed the add-on to "WPSSO Schema Merchant Return Policy Manager".
-
-= 2.6.2 =
-
-(2025/03/08) Updated admin menu priority.
-
-= 2.6.1 =
-
-(2024/09/12) Fixed deprecated creation of dynamic property in `WpssoMrpFilters`.
-
-= 2.6.0 =
-
-(2024/09/07) Renamed and moved the `WpssoMrpPost` class to `WpssoMrpIntegAdminPost`.
-
-= 2.5.0 =
-
-(2024/08/25) Changed the main instantiation action hook from 'init_objects' to 'init_objects_preloader'.
 
