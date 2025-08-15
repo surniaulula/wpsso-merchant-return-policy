@@ -143,7 +143,7 @@ if ( ! class_exists( 'WpssoMrpFiltersOptions' ) ) {
 
 					unset( $md_opts[ 'mrp_is_' . $opts_key ] );
 				}
-				
+
 				if ( 'https://schema.org/MerchantReturnNotPermitted' === $md_opts[ 'mrp_category' ] ) {
 
 					$md_opts = SucomUtil::preg_grep_keys( '/^mrp_(method|refund_type|item_condition|country)_/', $md_opts, $invert = true );

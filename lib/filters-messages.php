@@ -94,7 +94,7 @@ if ( ! class_exists( 'WpssoMrpFiltersMessages' ) ) {
 				case 'tooltip-meta-mrp_restocking_fees':	// Restocking Fees.
 
 					$text = __( 'The restocking fee charged to the consumer when returning a product.', 'wpsso-merchant-return-policy' ) . ' ';
-					
+
 					$text .= __( 'You can choose a fixed amount or a percentage of the price paid.', 'wpsso-merchant-return-policy' ) . ' ';
 
 					break;
