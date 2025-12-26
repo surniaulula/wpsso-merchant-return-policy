@@ -13,7 +13,7 @@
  * Description: Manage Merchant Return Policies for Google Merchant listings and Schema markup.
  * Requires Plugins: wpsso
  * Requires PHP: 7.4.33
- * Requires At Least: 5.9
+ * Requires At Least: 6.0
  * Tested Up To: 6.9
  * Version: 4.0.0
  *
