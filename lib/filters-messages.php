@@ -135,7 +135,7 @@ if ( ! class_exists( 'WpssoMrpFiltersMessages' ) ) {
 				 */
 				case 'info-meta-mrp-countries':
 
-					$text = '<p class="status-msg top">';
+					$text = '<p class="status-msg left" style="margin-top:10px;">';
 
 					$text .= sprintf( __( 'Note that Google limits this selection to a maximum of %d countries.',
 						'wpsso-merchant-return-policy' ), WPSSOMRP_MRP_COUNTRIES_MAX ) . ' ';
